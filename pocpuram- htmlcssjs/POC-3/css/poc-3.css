@@ -1,0 +1,901 @@
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+ header, section, footer, aside, nav, main, article, figure {
+     display: block;
+}
+ body, h1, h2, p, ul, ol {
+     margin: 0;
+     padding: 0;
+}
+ ul, ol, li {
+     list-style-type: none;
+}
+ img {
+     max-width: 100%;
+     vertical-align: middle;
+     height: auto;
+}
+ body {
+     color: #333333;
+     font-size: 16px;
+     line-height: 1.42857143;
+     background-color: #ffffff;
+     -webkit-tap-highlight-color: transparent;
+     font-family: 'Open Sans', sans-serif;
+}
+ a {
+     text-decoration: none;
+}
+ a:hover {
+     text-decoration: underline;
+}
+ input:focus, select:focus, textarea:focus, button:focus {
+     outline: none;
+}
+ button {
+     cursor: pointer;
+     -ms-touch-action: manipulation;
+     touch-action: manipulation;
+     -webkit-transition: 0.4s;
+     -o-transition: 0.4s;
+     transition: 0.4s;
+     border-style: none;
+}
+ button:hover {
+     opacity: 0.7;
+}
+ .clearfix {
+     clear: both;
+}
+ .container {
+     position: relative;
+     max-width: 1250px;
+     padding: 0 40px;
+     margin: 0 auto;
+}
+ .font-bold {
+     font-weight: bold;
+}
+ ::-webkit-input-placeholder {
+     color: #848484;
+     opacity: 1;
+     font-size: 14px;
+     font-family: 'Open Sans', sans-serif;
+     font-style: italic;
+}
+ :-ms-input-placeholder {
+     color: #848484;
+     opacity: 1;
+     font-size: 14px;
+     font-family: 'Open Sans', sans-serif;
+     font-style: italic;
+}
+ ::-ms-input-placeholder {
+     color: #848484;
+     opacity: 1;
+     font-size: 14px;
+     font-family: 'Open Sans', sans-serif;
+     font-style: italic;
+}
+ ::placeholder {
+     color: #848484;
+     opacity: 1;
+     font-size: 14px;
+     font-family: 'Open Sans', sans-serif;
+     font-style: italic;
+}
+ input:focus::-webkit-input-placeholder {
+     color: transparent;
+}
+ input:focus:-moz-placeholder {
+     color: transparent;
+}
+ input:focus::-moz-placeholder {
+     color: transparent;
+}
+ input:focus:-ms-input-placeholder {
+     color: transparent;
+}
+ input:focus, textarea:focus {
+     border: 1px solid #c89f2d;
+     -moz-box-shadow: 0 0 3px #c89f2d;
+     -webkit-box-shadow: 0 0 3px #c89f2d;
+          box-shadow: 0 0 3px #c89f2d;
+}
+ .flex-container {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+}
+ .flex-container .trichild {
+     text-align: center;
+}
+ .toggle {
+     width: 100%;
+     padding: 1px 20px;
+     background: rgb(21, 199, 159);
+     background: rgba(21, 199, 159, 0.35);
+     font-size: 30px;
+     display: none;
+}
+ .clickbar .bar1, .clickbar .bar2, .clickbar .bar3 {
+     width: 35px;
+     height: 5px;
+     background-color: #ffffff;
+     margin: 6px 0;
+     -webkit-transition: 0.4s;
+     -o-transition: 0.4s;
+     transition: 0.4s;
+}
+ .header {
+     background: transparent;
+     position: absolute;
+     z-index: 2;
+     right: 8%;
+     top: 0;
+}
+ .topnav {
+     height: 100%;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-flex: 1;
+     -ms-flex-positive: 1;
+     flex-grow: 1;
+     -webkit-box-pack: end;
+     -ms-flex-pack: end;
+     justify-content: flex-end;
+}
+ .headernav .topnav li {
+     display: inline;
+     padding: 46px 25px;
+}
+ .headernav li a {
+     color: #ffffff;
+     font-size: 21px;
+     font-family: 'Gentium Book Basic', serif;
+}
+ .headernav .topnav li:last-child {
+     padding-right: 0;
+     border-top: none;
+}
+ .headernav li {
+     border-top: 3px solid transparent;
+}
+ .headernav li:hover, .headernav li:active {
+     border-top: 3px solid #ffffff;
+}
+ .headernav .topnav .social-header:hover, .social-header ul li:hover {
+     border-top: none;
+}
+ .headernav .social-icons a {
+     font-family: "fontawesome";
+     color: #dab33e;
+}
+ .topnav .social-icons li {
+     padding: 46px 10px;
+}
+ .hero-content {
+     width: 100%;
+     height: 49vw;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     text-align: center;
+     position: relative;
+     color: #ffffff;
+     background-image: url("../images/main-hero.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+ .hero-content:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, rgba(0, 0, 0, 0)));
+     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 30%);
+     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 30%);
+     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), color-stop(30%, rgba(0, 0, 0, 0)));
+     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0)30%);
+     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0)30%);
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0)30%);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+     z-index: 1;
+}
+ .hero-content .hero-text {
+     display: block;
+     width: 78%;
+     z-index: 2;
+}
+ .hero-content .hero-text h1 {
+     font-family: 'Yeseva One', cursive;
+     font-size: 90px;
+     font-weight: 100;
+     color: #ffffff;
+     margin-bottom: 18px;
+}
+ .hero-content .button-blocks {
+     margin-top: 34px;
+}
+ .hero-content .button-blocks button {
+     margin: 0 auto;
+     color: #ffffff;
+     padding: 18px 49px;
+     font-size: 18px;
+     text-transform: uppercase;
+     font-family: 'Lato', sans-serif;
+}
+ .hero-content .button-blocks .table-button {
+     border: 1px solid #110e0c;
+     background: rgb(17, 14, 12);
+     background: rgba(17, 14, 12, 0.63);
+     margin-right: 30px;
+}
+ .hero-content .button-blocks .table-button:hover, .hero-content .button-blocks .menu-button:hover {
+     background: #b288e4;
+     color: #000000;
+}
+ .hero-content .button-blocks .menu-button {
+     border: 1px solid #e8e3ce;
+     background: rgb(255, 255, 255);
+     background: rgba(255, 255, 255, 0.2);
+}
+ .right-food {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     background-image: url("../images/background-pattern.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-color: #f1f1f1;
+}
+ .right-food .review {
+     display: block;
+}
+ .right-food .review .triblocks {
+     padding: 100px 40px 10px;
+}
+ .right-food .review .left-desc, .right-food .review .right-img {
+     width: 50%;
+}
+ .right-food .left-desc {
+     padding: 70px;
+}
+ .right-food .left-desc h1 {
+     font-family: 'Yeseva One', cursive;
+     font-size: 36px;
+     font-weight: 100;
+     color: #cc9900;
+     margin-bottom: 10px;
+}
+ .right-food .left-desc .textdiv {
+     font-family: 'Lato', sans-serif;
+     font-size: 16px;
+     color: #4c4c4c;
+     margin: 25px 0;
+}
+ .right-food .right-img img {
+     height: 100%;
+}
+ .ingred {
+     width: 100%;
+     height: 50vw;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     text-align: center;
+     color: #fff;
+     position: relative;
+     color: #ffffff;
+     background-image: url("../images/ingred.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     position: relative;
+}
+ .ingred .ingred-content {
+     display: block;
+     background: rgb(0, 0, 0);
+     background: rgba(0, 0, 0, 0.75);
+     width: 38%;
+     padding: 6% 2%;
+     left: 18%;
+}
+ .ingred .ingred-content img {
+     border-radius: 50%;
+     -webkit-box-shadow: inset 0 0 0 6px #443e38;
+     box-shadow: inset 0 0 0 6px #443e38;
+}
+ .ingred .ingred-content .textdiv {
+     margin: 33px 0 69px;
+}
+ .ingred-content h3 {
+     font-family: 'Yeseva One', cursive;
+     text-transform: capitalize;
+     font-size: 36px;
+     font-weight: 100;
+     color: #ffffff;
+     margin-bottom: 10px;
+     margin-top: 0;
+}
+ .book-now {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     background-image: url("../images/background-pattern.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-color: #eff2f2;
+}
+ .book-now .book-details {
+     padding: 7% 3%;
+}
+ .book-details .image-section img {
+     padding-right: 30px;
+}
+ .book-now .content-block {
+     width: 57%;
+}
+ .book-now .details-block {
+     width: 43%;
+     text-align: center;
+}
+ .book-now .details-block h3 {
+     font-family: 'Yeseva One', cursive;
+     font-size: 36px;
+     font-weight: 100;
+     color: #cc9900;
+     margin-bottom: 10px;
+     margin-top: 0;
+     line-height: 1;
+}
+ .book-now .details-block .textdiv {
+     font-family: 'Lato', sans-serif;
+     font-size: 16px;
+     color: #4c4c4c;
+     margin: 25px 0;
+}
+ .book-now .textdiv p {
+     margin-bottom: 15px;
+     font-family: 'Lato', sans-serif;
+     font-size: 16px;
+}
+ .book-now .user-details {
+     text-align: left;
+}
+ .book-now .user-details label {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 14px;
+     font-weight: bold;
+     color: #c9a131;
+}
+ .book-now .user-details .input {
+     margin-bottom: 30px;
+}
+ .book-now .user-details input {
+     padding: 9px 33px;
+     border: 1px solid #c8c6c6;
+     margin-top: 10px;
+     background: rgb(255, 255, 255);
+     background: rgba(255, 255, 255, 0.5);
+}
+ .user-details .date-input input {
+     background: #ffffff80 url(../images/calender.png) no-repeat 88% center;
+}
+ .user-details .select-number input {
+     background: #ffffff80 url(../images/dropdown.png) no-repeat 88% center;
+}
+ .user-details .name-input, .user-details .date-input {
+     margin-right: 6%;
+}
+ .name-input, .email-input, .date-input, .select-number {
+     display: inline-block;
+}
+ .book-now .user-details button {
+     display: block;
+     margin: 32px auto 0;
+     background: #c9a131;
+     padding: 9px 63px;
+     font-size: 16px;
+     color: #ffffff;
+     font-family: 'Open Sans', sans-serif;
+}
+ .guest-reviews {
+     width: 100%;
+     height: 50vw;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     text-align: center;
+     position: relative;
+     color: #ffffff;
+     background-image: url("../images/reviewbg.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+ .guest-content {
+     display: block;
+     background: rgb(0, 0, 0);
+     background: rgba(0, 0, 0, 0.75);
+     width: 50%;
+     padding-bottom: 6%;
+}
+ .guest-content h3 {
+     font-family: 'Yeseva One', cursive;
+     text-transform: capitalize;
+     font-size: 36px;
+     font-weight: 100;
+     color: #ffffff;
+     margin-bottom: 10px;
+}
+ .guest-content blockquote p {
+     font-family: 'Gentium Book Basic', serif;
+     font-size: 25px;
+     color: #dde0df;
+}
+ .guest-content cite {
+     font-style: normal;
+     font-size: 18px;
+}
+ .guest-content blockquote {
+     display: block;
+     padding: 15px 20px 15px 45px;
+     margin: 0 0 20px;
+     position: relative;
+     font-family: Georgia, serif;
+     color: #a5a6a1;
+}
+ .guest-content blockquote::before {
+     content: "\201C";
+     font-family: Georgia, serif;
+     font-size: 60px;
+     font-weight: bold;
+     color: #999;
+     position: absolute;
+     left: 1%;
+     top: -4%;
+}
+ .guest-content blockquote::after {
+     content: "";
+}
+ .guest-content blockquote a:hover {
+     color: #666;
+}
+ .book-now .book-details .triblocks {
+     -webkit-box-pack: start;
+     -ms-flex-pack: start;
+     justify-content: flex-start;
+}
+ .book-now .book-details .left-image {
+     margin-right: 35px;
+}
+ .menu-list {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     background-image: url("../images/background-pattern.png");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-color: #f5f7f8;
+}
+ .menu-items {
+     display: block;
+     color: #000000;
+}
+ .menu-main h1 {
+     font-size: 36px;
+     font-weight: 100;
+     color: #cc9900;
+     margin-bottom: 10px;
+     text-transform: capitalize;
+}
+ .menu-main {
+     margin-bottom: 70px;
+}
+ .menu-items .triblocks {
+     padding: 70px 110px 0;
+     font-family: 'Yeseva One', cursive;
+}
+ .menu-main .menu-card {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     padding-bottom: 14px;
+}
+ .menu-card .menu-name {
+     font-size: 21px;
+     font-weight: 100;
+     color: #cc9900;
+     text-transform: capitalize;
+}
+ .spcl-div {
+     position: absolute;
+     top: -25px;
+     right: 0;
+     background: #e9dbb0;
+}
+ .spcl-div .spcl-text {
+     border-top: none;
+     padding-top: 0;
+     color: #ffffff;
+     font-size: 14px;
+     font-family: 'Lato', sans-serif;
+     text-transform: capitalize;
+     padding: 2px 9px;
+}
+ .menu-block {
+     padding: 22px 0;
+}
+ .spcl-block {
+     border: 1px solid #e9dbb0;
+     position: relative;
+     padding: 3px 0 18px;
+     -webkit-transform: scale(1.08, 1);
+     -ms-transform: scale(1.08, 1);
+     transform: scale(1.08, 1);
+}
+ .menu-block .title-desc {
+     border-top: 1px solid #e9dbb0;
+     padding-top: 15px;
+     text-align: left;
+     font-size: 16px;
+     color: #4c4c4c;
+}
+ .menu-card .menu-price {
+     font-size: 21px;
+     font-weight: 100;
+     color: #cc9900;
+     -webkit-box-pack: end;
+     -ms-flex-pack: end;
+     justify-content: flex-end;
+     -webkit-box-flex: 1;
+     -ms-flex-positive: 1;
+     flex-grow: 1;
+     text-align: right;
+}
+ .footer-links {
+     background: #191919;
+     padding: 45px 0;
+     color: #ffffff 
+}
+ .footer-blocks {
+     text-align: center;
+     width: 33%;
+}
+ .footer-blocks h3 {
+     font-family: 'Yeseva One', cursive;
+     text-transform: capitalize;
+     font-size: 21px;
+     font-weight: 100;
+     color: #fefefe;
+     margin-bottom: 10px;
+}
+ .footer-blocks img {
+     margin-bottom: 15px;
+}
+ .footer-blocks p {
+     font-size: 16px;
+}
+ .footer-blocks .social-icons li, .footer-blocks .card-icons li {
+     display: inline-block;
+     margin-top: 56px;
+     padding-right: 12px 
+}
+ .footer-blocks .social-icons .fa, .footer-blocks .card-icons .fa {
+     color: #ffffff;
+}
+ .social-icons a:hover {
+     text-decoration: none;
+}
+ .menu-main .spcl-block .menu-card {
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-top: 15px;
+}
+ .spcl-block .title-desc {
+     padding-left: 15px;
+     padding-right: 15px;
+     border-top: none;
+     padding-top: 0;
+}
+ .spcl-block .title-desc:before {
+     content: "";
+     display: block;
+     margin: 0 auto;
+     width: 100%;
+     padding-top: 15px;
+     border-top: 1px solid #e9dbb0;
+}
+ @media screen and (min-width: 768px) and (max-width: 1200px) {
+     .headernav .topnav li {
+         padding: 23px 15px;
+    }
+     .headernav {
+         margin-right: 0;
+         padding: 0;
+    }
+     .headernav li a {
+         font-size: 14px;
+    }
+     .hero-content {
+         height: 100vw;
+    }
+     .hero-content .hero-text h1 {
+         font-size: 70px;
+    }
+     .hero-content .hero-text {
+         width: 100%;
+    }
+     .right-food .left-desc {
+         padding: 0;
+    }
+     .right-food .review .triblocks {
+         padding: 100px 40px 50px;
+    }
+     .guest-content {
+         width: 70%;
+    }
+     .menu-items .triblocks {
+         padding: 35px 20px 0;
+    }
+     .menu-list .triblocks .trichild {
+         margin: 25px;
+    }
+     .ingred {
+         height: 75vw;
+    }
+     .ingred .ingred-content {
+         padding: 4%;
+    }
+     .ingred .ingred-content img {
+         width: 60px;
+    }
+     .book-now .book-details {
+         padding: 3% 2%;
+    }
+     .book-now .book-details .left-image {
+         margin-right: 10px;
+    }
+     .book-now .book-details .triblocks img {
+         height: 100%;
+    }
+     .book-now .details-block {
+         margin: 8px;
+    }
+     .book-now .user-details {
+         text-align: center;
+    }
+     .user-details .name-input, .user-details .date-input {
+         margin-right: 0;
+    }
+     .guest-reviews {
+         height: 75vw;
+    }
+     .ingred .ingred-content {
+         width: 50%;
+    }
+}
+/*mobile*/
+ @media screen and (min-width: 320px) and (max-width: 767px) {
+     .flex-container {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+    }
+     .footer-links {
+         padding: 28px;
+         text-align: center;
+    }
+     ::-webkit-input-placeholder {
+         font-size: 14px;
+    }
+     :-ms-input-placeholder {
+         font-size: 14px;
+    }
+     ::-ms-input-placeholder {
+         font-size: 14px;
+    }
+     ::placeholder {
+         font-size: 14px;
+    }
+     .toggle {
+         display: block;
+    }
+     .header {
+         padding: 0;
+    }
+     .topnav {
+         width: 100%;
+         display: none;
+         height: auto;
+    }
+     .header h3 {
+         font-size: 30px;
+         padding: 10px;
+    }
+     .headernav {
+         margin-right: 0;
+         padding: 0;
+    }
+     .headernav .topnav li {
+         display: block;
+         text-align: center;
+         padding: 10px 23px;
+    }
+     .headernav li a {
+         color: #ffffff;
+    }
+     .headernav .topnav li:last-child {
+         padding-right: 23px;
+    }
+     .headernav .topnav li:active {
+         display: block;
+         background: #88e4e1;
+         border-radius: 0;
+    }
+     .mobileactive {
+         display: block;
+         position: absolute;
+         z-index: 3;
+         left: 0;
+         background: rgb(21, 199, 159);
+    }
+     .change .bar1 {
+         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+         -ms-transform: rotate(-45deg) translate(-9px, 6px);
+         transform: rotate(-45deg) translate(-9px, 6px);
+    }
+     .change .bar2 {
+         opacity: 0;
+    }
+     .change .bar3 {
+         -webkit-transform: rotate(45deg) translate(-8px, -8px);
+         -ms-transform: rotate(45deg) translate(-8px, -8px);
+         transform: rotate(45deg) translate(-8px, -8px);
+    }
+     .header {
+         position: static;
+    }
+     .headernav li:hover, .headernav li:active {
+         border-top: 0;
+         border-bottom: 1px solid #ffffff;
+    }
+     .hero-content {
+         height: auto;
+    }
+     .hero-content .hero-text {
+         width: 100%;
+         padding: 20px 40px;
+    }
+     .hero-content .hero-text h1 {
+         font-size: 45px;
+         margin-bottom: 0;
+    }
+     .hero-content .button-blocks .table-button {
+         margin-right: 0;
+         margin-bottom: 25px;
+    }
+     .right-food .review .left-desc, .right-food .review .right-img {
+         width: 100%;
+    }
+     .right-food .left-desc {
+         padding: 0;
+    }
+     .right-food .review .triblocks {
+         padding: 40px;
+    }
+     .guest-content {
+         width: 100%;
+         padding-bottom: 6%;
+         margin: 25px;
+         padding: 10px;
+    }
+     .menu-main {
+         margin-bottom: 0;
+    }
+     .menu-items .triblocks {
+         padding: 35px 20px;
+    }
+     .ingred {
+         height: auto;
+    }
+     .ingred .ingred-content {
+         width: 100%;
+         margin: 20px;
+         left: 0;
+    }
+     .ingred .ingred-content img {
+         width: 50px;
+    }
+     .ingred .triblocks {
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -ms-flex-direction: row;
+         flex-direction: row;
+    }
+     .ingred .ingred-content .textdiv {
+         margin: 0 0 32px;
+    }
+     .right-food .right-img img {
+         height: auto;
+    }
+     .book-now .content-block, .book-now .details-block {
+         width: 100%;
+    }
+     .book-now .book-details {
+         padding: 3% 2%;
+    }
+     .book-now .book-details .left-image {
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+     .book-now .book-details .triblocks img {
+         height: 100%;
+         width: 100%;
+    }
+     .book-now .details-block {
+         margin: 8px;
+         padding: 8px;
+    }
+     .book-now .user-details {
+         text-align: center;
+    }
+     .user-details .name-input, .user-details .date-input {
+         margin-right: 0;
+    }
+     .footer-links {
+         padding: 22px 0;
+    }
+     .footer-blocks {
+         width: 100%;
+    }
+     .footer-blocks .card-block, .footer-blocks .social-media {
+         margin-bottom: 30px;
+         margin-top: 30px;
+    }
+     .guest-reviews {
+         height: auto;
+    }
+}

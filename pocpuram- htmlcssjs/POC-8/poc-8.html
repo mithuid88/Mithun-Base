@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>POC-8</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/poc-8.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="sidepanel">
+        <div class="blue-band">
+            <img src="images/sync.png" alt="sync-head">
+            <p>sync</p>
+        </div>
+        <div class="intro flex-container">
+            <div class="stat-photo" title="Online">
+                <img src="images/john-online.png" alt="about-image">
+                <span class="online"><span></span></span>
+            </div>
+            <div class="right-desc">
+                <h4>joil vaster</h4>
+                <p>Jhn,Mat</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="top-links">
+                <li><a  href="#"><img src="images/Home.png" alt=""><span>Dashboard</span></a></li>
+                <li><a  href="#"><img src="images/messages.png" alt=""><span>Messages</span> <span class="badge">32 </span></a></li>
+                <li><a  href="#"><img src="images/element.png" alt=""><span>UI elements</span></a></li>
+                <li><a  href="#"><img src="images/piechart.png" alt=""><span>Charts</span></a></li>
+                <li><a  href="#"><img src="images/calender.png" alt=""><span>Calender</span></a></li>
+            </ul>
+            <ul class="bottom-links">
+                <li><a href="#">user</a></li>
+                <li><a href="#">security</a></li>
+                <li><a href="#">customers</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="top-section">
+        <header class="header">
+            <div class="header-wrap container clearfix">
+                <div class="left-nav flex-container">
+                    <div class="toggle">
+                        <span class="fa fa-caret-left"></span>
+                        <div class="clickbar">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                    <div class="search-icon" id="myBtn">
+                        <a href="#"><img src="images/search.png" alt="search-icon"></a>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <form method="post">
+                                    <input type="text" name="search" placeholder="search here">
+                                    <button type="submit" class="inner-submit">submit</button>
+                                    <button type="button" class="close-icon"> ×</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="headernav">
+                    <ul class="topnav">
+                        <li><a href="#" title="Settings">
+                    <img src="images/settings.png" alt="Settings">
+                </a></li>
+                        <li><a href="#"  title="Download">
+                    <img src="images/log-out.png" alt="Download">
+                </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="stats">
+            <div class="stat-wrapper flex-container container">
+                <div class="stat-child flex-container sales">
+                    <div class="stat-photo"><img src="images/sales.png" alt="sales"> </div>
+                        <div class="right-stat">
+                            <div class="stats-num">
+                                <p>total sales</p>
+                                <span class="number"><sup>$</sup>215,645</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-child flex-container  quote">
+                        <div class="stat-photo"><img src="images/quote.png" alt="quote"></div>
+                            <div class="right-stat">
+                                <div class="stats-num">
+                                    <p>new quote</p>
+                                    <span class="number">523,543</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-child flex-container  orders">
+                            <div class="stat-photo"><img src="images/orders.png" alt="orders"></div>
+                                <div class="right-stat">
+                                    <div class="stats-num">
+                                        <p>orders</p>
+                                        <span class="number">23,414</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-child flex-container  products">
+                                <div class="stat-photo"><img src="images/products.png" alt="products"></div>
+                                    <div class="right-stat">
+                                        <div class="stats-num">
+                                            <p>products</p>
+                                            <span class="number">19,087</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </section>
+        <section class="graphs">
+            <div class="graph-wrapper flex-container container">
+                <div class="visitor-graph">
+                    <div class="top-bar clearfix">
+                        <h4>product visitors</h4>
+                        <div class="legend">
+                            <span class="block"></span>
+                            <span class="text">visitors</span>
+                        </div>
+                    </div>
+                    <div id="chartContainer" class="chart"></div>
+                </div>
+                <div class="sales-profit-graph">
+                    <div class="top-graph">
+                        <div id="chartContainer2" class="chart"></div>
+                    </div>
+                    <div class="bottom-graph">
+                        <div id="chartContainer3" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pie-twitbio">
+            <div class="pie-twiwrap container flex-container">
+                <div class="pie-traffic">
+                    <div class="top-bar clearfix">
+                        <h4>website traffic</h4>
+                        <button type="reset"><img src="images/reset.png" alt="reset-button" title="Reset"></button>
+                    </div>
+                    <div class="doughnut-parent">
+                        <div class="dough">
+                            <div id="chartdiv"></div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="twitterbio">
+                    <div class="twit-hero">
+                        <div class="hero-text">
+                            <h5>join vaster</h5>
+                            <p>wood</p>
+                        </div>
+                    </div>
+                    <div class="bio-detail">
+                        <a href="#"><img src="images/profilepic.png" alt="profile-image"></a>
+                        <p class="profile-desc">
+                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"</p>
+                        <div class="twit-stat">
+                            <a href="#">179<span>customers</span></a>
+                            <a href="#">19K<span>products</span></a>
+                            <a href="#">15K<span>followers</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ratings container">
+            <div class="ratings-wrapper">
+                <div class="header-div clearfix">
+                    <h3>customer ratings</h3>
+                    <div class="vote-number">
+                        <span class="votes">2,45,567 Votes</span>
+                        <button type="reset"><img src="images/reset.png" alt="reset-button" title="Reset"></button>
+                    </div>
+                </div>
+                <div class="table-rating">
+                    <div class="table-child rowawesome">
+                        <div class="name-label">
+                            <img src="images/Happy.png" alt="emoji">
+                            <p>The product is Awesome</p>
+                        </div>
+                        <div class="bar-graph">
+                            <div class="skill">
+                                <div class="skill-level">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="percentage">67%</div>
+                    </div>
+                    <div class="table-child rowsatisfied">
+                        <div class="name-label">
+                            <img src="images/Smiley.png" alt="emoji">
+                            <p>Yeah I'm satisfied with it</p>
+                        </div>
+                        <div class="bar-graph">
+                            <div class="skill">
+                                <div class="skill-level">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="percentage">25%</div>
+                    </div>
+                    <div class="table-child rowaverage">
+                        <div class="name-label">
+                            <img src="images/Sad.png" alt="emoji">
+                            <p>Average product,not bad</p>
+                        </div>
+                        <div class="bar-graph">
+                            <div class="skill">
+                                <div class="skill-level">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="percentage">7%</div>
+                    </div>
+                    <div class="table-child notusefull">
+                        <div class="name-label">
+                            <img src="images/Angry.png" alt="emoji">
+                            <p>Not usefull at all it sucks</p>
+                        </div>
+                        <div class="bar-graph">
+                            <div class="skill">
+                                <div class="skill-level">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="percentage">15%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+    <!-- <script src="amcharts/plugins/responsive/responsive.min.js" type="text/javascript"></script> -->
+    <script src="js/poc-8.js"></script>
+</body>
+
+</html>
