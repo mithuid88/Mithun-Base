@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>POC-6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/jquery.datepick.css">
+    <link rel="stylesheet" type="text/css" href="css/poc-6.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<section class="header-band flex-container container">
+<div class="band-block green"></div>
+<div class="band-block blue"></div>
+<div class="band-block yellow"></div>
+<div class="band-block red"></div>
+<div class="band-block black"></div>
+</section>
+
+<section class="user-kit container">
+<span class="text">user kit</span>
+
+</section>
+       <header class="header container clearfix">
+        <nav class="headernav">
+    <span class="power-icon" title="Power-Icon"><a href="#" class="fa fa-power-off"></a></span>
+            <div class="toggle">
+                <div class="clickbar">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <ul class="topnav">
+             <li><a href="#">about us</a></li>
+                <li><a href="#">resources</a></li>
+                <li class="active"><a href="#">portfolio</a>
+                <ul class="dropnav">
+                    <li><a href="#">web design</a></li>
+                    <li class="subactive"><a href="#">identity</a>
+                    <ul class="submenu">
+                    <li><a href="#">case study</a></li>
+                    <li><a href="#">logos</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </li>
+                <li><a href="#">contact</a></li>
+              </ul>
+          <span class="header-search"><a href="#"><img src="images/searchicon.png" alt="searchicon"></a></span>
+        </nav>
+                <div class="search-box">
+            <input type="search" name="search" placeholder="search here">
+            <button type="submit" class="inner-submit">Submit</button>
+            <button type="button" class="close-icon">×</button>
+        </div>
+        </header> 
+
+<section class="small-search container">
+<div class="search-parent">
+<form method="get">
+      <input type="text" placeholder="search">
+     <button type="submit">
+         <img src="images/searchicon.png" alt="submit-search">
+     </button>    
+</form>
+ 
+</div>
+
+</section>
+<section class="tools-box container">
+<ul class="tabs flex-container">
+<li>
+<a href="#" title="Checked" class="checked"></a>
+</li>
+<li>
+<a href="#" title="Dismiss" class="dismiss"></a>
+</li>
+<li>
+<a href="#" title="Tools" class="tools"></a>
+</li>
+<li>
+<a href="#" title="Notes" class="notes"></a>
+
+</li>
+</ul>
+</section>
+<section class="full-search container">
+<div class="full-input">
+    <form method="post" class="flex-container">
+<span class="power-icon" title="Power-Icon"><a href="#" class="fa fa-power-off"></a></span>
+       <input type="text" placeholder="search"> 
+            <button type="submit">
+         <img src="images/searchicon.png" alt="submit-search">
+     </button>   
+    </form>
+</div>
+</section>
+<section class="hero-carousel">
+<div class="carousel-parent container">
+<div class="carousel-image"><img src="images/carousel-image.png" alt="carousel-image"></div>
+<div class="carousel-image"><img src="images/carousel-image.png" alt="carousel-image"></div>
+<div class="carousel-image"><img src="images/carousel-image.png" alt="carousel-image"></div>
+</div>
+</section>
+<section class="intro-video">
+    <div class="flex-container container">
+    <div class="intro">
+    <img src="images/circleintro.png" alt="person-image">
+    <h3>james p.</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Maecenas sodales nunc id libero dignissi,,a convallis nunc dapibus.Donec laoreet tortor ornare porta aiquet.</p>
+    <ul class="social-icons">
+    <li><a class="facebook" href="#" target="_blank">Facebook
+    </a></li>
+    <li><a class="twitter" href="#" target="_blank">Twitter
+    </a></li>
+        <li><a class="linkedin" href="#" target="_blank">LinkedIn
+    </a></li>
+    <li><a class="google-plus" href="#" target="_blank">Google-plus
+    </a></li>
+
+    </ul>
+    </div>
+ <div class="video-head">
+        <div class="video-box">
+<video class="video-display" poster="images/video-poster.png" controls>
+        </video>
+    <div class="controls"></div>
+
+    
+ 
+        </div>
+        </div>       
+    </div>
+</section>
+<section class="lightbox-overlay container">
+    <div class="overlay-link">
+        <div class="overlay-image">
+            <button type="button" class="btn">click me for modal</button>
+        </div>
+    </div>
+
+    <div class="modal-link">
+
+        <div id="myModal" class="modal">
+        <div class="cursor-parent">
+         <button type="button" class="close cursor"> ×</button>
+        </div>
+
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <img src="images/gal1.png" alt="gallery">
+                </div>
+
+          
+
+          <div class="carousel-container">
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="1">  <img class="demo cursor" src="images/gal1.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="2"> <img class="demo cursor" src="images/gal2.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="3"> <img class="demo cursor" src="images/gal3.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="4">  <img class="demo cursor" src="images/gal4.png"  alt="image"> </a>
+                </div>
+                                <div class="column">
+                    <a class="carousel-control" href="#" data-value="5">  <img class="demo cursor" src="images/gal5.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="6"> <img class="demo cursor" src="images/gal6.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="7"> <img class="demo cursor" src="images/gal7.png"  alt="image"> </a>
+                </div>
+                <div class="column">
+                    <a class="carousel-control" href="#" data-value="8">  <img class="demo cursor" src="images/gal8.png"  alt="image"> </a>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="icons-last-row flex-container">
+    <div class="page-num">
+    <span class="slide-num"></span>/<span class="slide-total"></span>
+    </div>
+    <div class="icons-list">
+       <ul>
+        <li><a href="#" class="italic" target="_blank" title="Change the Font"></a></li>
+          <li><a href="#" class="chat" target="_blank" title="Start Chatting"></a></li>
+          <li><a href="#" class="like" target="_blank" title="Like"></a></li>
+      <li><a href="#" class="share" target="_blank" title="Share"></a></li>
+    </ul> 
+    </div>
+    <div class="download">
+          <a href="#" class="download" target="_blank" title="Download"></a>
+    </div>     
+        </div>
+    </div>
+</section>
+<section class="tabs-login">
+<div class="parent-wrapper flex-container container">
+  <div class="tabs-parent">
+      <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">tab</li>
+        <li class="tab-link" data-tab="tab-2">tab</li>
+        <li class="tab-link" data-tab="tab-3">tab</li>
+    </ul>
+
+    <div id="tab-1" class="tab-content current flex-container">
+        <div class="tab-image">
+            <img src="images/tabperson.png" alt="person">
+        </div>
+        <div class="tab-desc">
+               <h3>james p.</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Maecenas sodales nunc id libero dignissi,,a convallis nunc dapibus.Donec laoreet tortor ornare porta aiquet.</p>
+    <ul class="social-icons">
+    <li><a class="facebook" href="#" target="_blank">Facebook
+    </a></li>
+    <li><a class="twitter" href="#" target="_blank">Twitter
+    </a></li>
+        <li><a class="linkedin" href="#" target="_blank">LinkedIn
+    </a></li>
+    <li><a class="google-plus" href="#" target="_blank">Google-plus
+    </a></li>
+
+    </ul> 
+        </div>
+    </div>
+    <div id="tab-2" class="tab-content flex-container">
+        <div class="tab-image">
+            <img src="images/tabperson.png" alt="person">
+        </div>
+        <div class="tab-desc">
+               <h3>james p.</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Maecenas sodales nunc id libero dignissi,,a convallis nunc dapibus.Donec laoreet tortor ornare porta aiquet.</p>
+    <ul class="social-icons">
+    <li><a class="facebook" href="#" target="_blank">Facebook
+    </a></li>
+    <li><a class="twitter" href="#" target="_blank">Twitter
+    </a></li>
+        <li><a class="linkedin" href="#" target="_blank">LinkedIn
+    </a></li>
+    <li><a class="google-plus" href="#" target="_blank">Google-plus
+    </a></li>
+
+    </ul> 
+        </div>
+    </div>
+    <div id="tab-3" class="tab-content flex-container">
+        <div class="tab-image">
+            <img src="images/tabperson.png" alt="person">
+        </div>
+        <div class="tab-desc">
+               <h3>james p.</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Maecenas sodales nunc id libero dignissi,,a convallis nunc dapibus.Donec laoreet tortor ornare porta aiquet.</p>
+    <ul class="social-icons">
+    <li><a class="facebook" href="#" target="_blank">Facebook
+    </a></li>
+    <li><a class="twitter" href="#" target="_blank">Twitter
+    </a></li>
+        <li><a class="linkedin" href="#" target="_blank">LinkedIn
+    </a></li>
+    <li><a class="google-plus" href="#" target="_blank">Google-plus
+    </a></li>
+
+    </ul> 
+        </div>
+    </div>
+
+    
+</div>
+<div class="login-parent">
+    <h3>login</h3>
+    <form method="post">
+    <div class="email-parent">
+   <input type="email" placeholder="ui@kit.com"  name="email">     
+    </div>
+<div class="password-parent">
+ <input type="password" placeholder="************"  name="password">   
+</div>
+<button type="submit">enter</button>
+
+    </form>
+
+</div>  
+</div>
+
+</section>
+
+
+<section class="full-login container">
+    <div class="login-box ">
+     <h3>login</h3>
+        <form method="post">
+           <div class="input-box">
+<input type="email" name="email" placeholder="ui@kit.com">
+<input type="password" name="password" placeholder="************">    
+           </div>
+      <div class="button-box">
+        <button type="submit">enter</button>
+      </div>
+
+        </form>
+    </div>
+</section>
+<section class="news-date">
+<div class="data-wrapper flex-container container">
+    <div class="news-components">
+    <div class="news-letter">
+
+    <form method="post">
+    <label for="newsletter">newsletter</label><br>
+    <input type="email" name="email" id="newsletter" placeholder="ui@kit.com">
+    <button type="button" class="news-submit">submit</button>
+    </form>    
+    </div>
+    <div class="progress-one">
+    <div class="progress-wrapper">
+  <div class="progress-bar">
+<div class="progress"></div>
+<div  class="percent-count">100%</div>
+</div>  
+</div>                          
+   </div>
+
+    <div class="progress-two">
+<div class="progress-bar">
+<div class="progress"></div>
+<div  class="percent-count">100%</div>
+</div>
+    </div>
+    <div class="progress-three">
+    <div class="progress-wrapper">
+  <div class="progress-bar">
+<div class="progress"></div>
+<div  class="percent-count">100%</div>
+</div>  
+</div>
+    </div>
+        
+    </div>
+    <div class="date-picker">
+<div id="inlineDatepicker"></div>
+
+    </div>
+    </div>
+</section>
+<section class="number-page">
+    <div class="number-wrapper flex-container container">
+        <div class="left-pagi">
+        <div class="pagination">
+        <a href="#"></a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">10</a>
+        <a href="#">20</a>
+        <a href="#">30</a>
+        <a href="#" class="fa fa-caret-right"></a>
+        </div>    
+        </div>
+        <div class="right-pagi">
+         <div class="pagination">
+        <a href="#" class="fa fa-caret-left"></a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">10</a>
+        <a href="#">20</a>
+        <a href="#">30</a>
+        <a href="#" class="fa fa-caret-right"></a>
+        </div>  
+        </div>
+    </div>
+</section>
+<section class="prevnext-page">
+    <div class="prevnext-wrapper flex-container container">
+        <div class="pagi-one flex-container">
+        <div class="left-next">   
+        <span class="icon"><a href="#" class="fa fa-caret-left"></a></span>
+        <span class="text">next page</span>
+        </div>
+        <div class="right-prev"> 
+               <span class="text">previous page</span>  
+        <span class="icon"><a href="#" class="fa fa-caret-right"></a></span>
+ 
+        </div>
+        </div>
+
+        <div class="pagi-two">
+        <span class="icon"><a href="#" class="fa fa-caret-left"></a></span>  
+        <span class="divider"></span>
+        <span class="icon"><a href="#" class="fa fa-caret-right"></a></span>
+        </div>
+        <div class="pagi-three">
+        <span class="icon"><a href="#" class="fa fa-caret-left"></a></span>  
+        <span class="divider"></span>
+        <span class="icon"><a href="#" class="fa fa-caret-right"></a></span> 
+        </div>
+
+    </div>
+</section>
+<section class="checkbox-set">
+    <div class="check-wrapper flex-container container">
+        <div class="left-check flex-container">
+            <div class="one-check">
+
+              <span class="text">on</span>
+                <span class="label-check">                
+<input class="checkimage" id="checkimage" type="checkbox">
+<label for="checkimage"></label>
+                </span>
+            </div>
+            <div class="two-check">
+                <span class="label-check">                
+<input class="checkimage1" id="checkimage1" type="checkbox">
+<label for="checkimage1"></label>
+                </span>
+            <span class="text">off</span>
+
+            </div>
+        </div>
+        <div class="right-check flex-container">
+        <div class="first-check">
+        <div class="top-row">
+        <span class="left-demo">
+        <span></span>
+        </span>
+        <span class="right-text">normal</span>  
+        </div>
+        <div class="bottom-row">
+        <span class="left-demo">
+        <span></span>
+        </span>
+        <span class="right-text">normal</span>  
+        </div>
+        </div>
+        <div class="second-check">
+        <div class="top-row">
+        <span class="left-demo">
+        <span></span>
+        </span>
+        <span class="right-text">hover</span>  
+        </div>
+        <div class="bottom-row">
+        <span class="left-demo">
+        <span></span>
+        </span>
+        <span class="right-text">hover</span>  
+        </div>  
+        </div>
+            <div class="third-check">
+         <div class="top-row">
+         <span class="left-demo">
+                    <span class="label-check">                
+<input class="checkimage2" id="checkimage2" type="checkbox">
+<label for="checkimage2"></label>
+                </span>
+        </span>
+        <span class="right-text">normal</span>  
+</div>
+<div class="bottom-row">
+      <span class="left-demo">
+                    <span class="label-check">                
+<input class="checkimage3" id="checkimage3" type="checkbox">
+<label for="checkimage3"></label>
+                </span>
+        </span>
+        <span class="right-text">normal</span> 
+
+        </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="button-sizes container">
+<div class="button-group">
+    <div class="button-child first-row flex-container">
+    <button type="button" class="small">small</button>
+    <button type="button" class="medium">medium</button>
+    <button type="button" class="normal">normal</button>
+    <button type="button" class="big">big</button>
+    </div>
+<div class="button-child second-row flex-container">
+    <button type="button" class="small">small</button>
+    <button type="button" class="medium">medium</button>
+    <button type="button" class="normal">normal</button>
+    <button type="button" class="big">big</button>
+    </div>
+    <div class="button-child third-row flex-container">
+    <button type="button" class="small">small</button>
+    <button type="button" class="medium">medium</button>
+    <button type="button" class="normal">normal</button>
+    <button type="button" class="big">big</button>
+    </div>
+</div>
+
+
+</section>
+<section class="icons-set container">
+<div class="first-row">
+<div class="flex-container">
+    <a href="#" class="fa fa-twitter" title="Twitter" target="_blank"><span>Twitter</span></a>
+    <a href="#" class="fa fa-facebook"  title="Facebook" target="_blank"><span>Facebook</span></a>
+    <a href="#" class="fa fa-linkedin" title="Linked-In" target="_blank"><span>Linked-In</span></a>
+    <a href="#" class="fa fa-google-plus" title="Google-Plus" target="_blank"><span>Google-Plus</span></a>
+    <a href="#" class="fa fa-dribbble" title="Dribble" target="_blank"><span>Dribble</span></a>
+</div>
+<div class="flex-container">
+    <a href="#" class="fa fa-behance" title="Behance" target="_blank"><span>Behance</span></a>
+    <a href="#" class="fa fa-pinterest-p" title="Pintrest" target="_blank"><span>Pintrest</span></a>
+    <a href="#" class="fa fa-rss" title="Rss" target="_blank"><span>Rss</span></a>
+    <a href="#" class="fa fa-youtube" title="YouTube" target="_blank"><span>YouTube</span></a>
+    <a href="#" class="fa fa-flickr" title="Flickr" target="_blank"><span>Flickr</span></a>
+</div>
+</div>
+
+<div class="second-row">
+<div class="flex-container">
+    <a href="#" class="fa fa-twitter" title="Twitter" target="_blank"><span>Twitter</span></a>
+    <a href="#" class="fa fa-facebook"  title="Facebook" target="_blank"><span>Facebook</span></a>
+    <a href="#" class="fa fa-linkedin" title="Linked-In" target="_blank"><span>Linked-In</span></a>
+    <a href="#" class="fa fa-google-plus" title="Google-Plus" target="_blank"><span>Google-Plus</span></a>
+    <a href="#" class="fa fa-dribbble" title="Dribble" target="_blank"><span>Dribble</span></a>
+</div>
+<div class="flex-container">
+    <a href="#" class="fa fa-behance" title="Behance" target="_blank"><span>Behance</span></a>
+    <a href="#" class="fa fa-pinterest-p" title="Pintrest" target="_blank"><span>Pintrest</span></a>
+    <a href="#" class="fa fa-rss" title="Rss" target="_blank"><span>Rss</span></a>
+    <a href="#" class="fa fa-youtube" title="YouTube" target="_blank"><span>YouTube</span></a>
+    <a href="#" class="fa fa-flickr" title="Flickr" target="_blank"><span>Flickr</span></a>
+</div>
+</div>
+
+<div class="third-row">
+<div class="flex-container">
+    <a href="#" class="fa fa-twitter" title="Twitter" target="_blank"><span>Twitter</span></a>
+    <a href="#" class="fa fa-facebook"  title="Facebook" target="_blank"><span>Facebook</span></a>
+    <a href="#" class="fa fa-linkedin" title="Linked-In" target="_blank"><span>Linked-In</span></a>
+    <a href="#" class="fa fa-google-plus" title="Google-Plus" target="_blank"><span>Google-Plus</span></a>
+    <a href="#" class="fa fa-dribbble" title="Dribble" target="_blank"><span>Dribble</span></a>
+</div>
+<div class="flex-container">
+    <a href="#" class="fa fa-behance" title="Behance" target="_blank"><span>Behance</span></a>
+    <a href="#" class="fa fa-pinterest-p" title="Pintrest" target="_blank"><span>Pintrest</span></a>
+    <a href="#" class="fa fa-rss" title="Rss" target="_blank"><span>Rss</span></a>
+    <a href="#" class="fa fa-youtube" title="YouTube" target="_blank"><span>YouTube</span></a>
+    <a href="#" class="fa fa-flickr" title="Flickr" target="_blank"><span>Flickr</span></a>
+</div>
+</div>  
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/poc-6.js"></script>
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.datepick.js"></script>
+
+</body>
+</html>
