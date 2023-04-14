@@ -1,0 +1,11 @@
+.sticky-header {
+    height: 100px;
+    background-color: #94b61c;
+    transition: 0.2s;
+    position: static;
+
+    &.is-sticky {
+        position: sticky;
+        top: 0;
+    }
+}
