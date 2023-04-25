@@ -6,7 +6,7 @@ function Stickyheader(props) {
 
     useEffect(() => {
         const headerHeight = document.querySelector(".header").offsetHeight;
-        console.log(headerHeight);
+
         const handlePos = () => {
             if (window.scrollY > headerHeight) {
                 setPos(true);
@@ -24,7 +24,10 @@ function Stickyheader(props) {
 
     return (
         <div className={`sticky-header ${pos ? 'is-sticky' : ''}`}>
-            {props.children}
+            <div className='container'>
+                {props.children}
+            </div>
+
         </div>
     )
 }
