@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import './Header.scss'
+import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
     const [mobActive, mobUpdateActive] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
@@ -41,35 +42,35 @@ const Header = () => {
                             </div>
                         </div>
                         <ul className={`${mobActive ? "open" : ""}`}>
-                            <li><a href="#">Home</a></li>
+                            <li><NavLink to="/">Home</NavLink></li>
                             <li onClick={handleClick}>
-                                <a href="#">Shopping</a>
+                                <NavLink to="/">Shopping</NavLink>
                                 <ul>
-                                    <li><a href="#">Clothes</a></li>
-                                    <li><a href="#">Shoes</a></li>
+                                    <li><NavLink to="/clothes">Clothes</NavLink></li>
+                                    <li><NavLink to="/shoes">Shoes</NavLink></li>
                                 </ul>
                             </li>
                             <li onClick={handleClick}>
-                                <a href="#">Sports</a>
+                                <NavLink to="/">Sports</NavLink>
 
                                 <ul>
-                                    <li><a href="#">Football</a></li>
-                                    <li><a href="#">F1</a></li>
-                                    <li><a href="#">Cricket</a></li>
+                                    <li><NavLink to="/football">Football</NavLink></li>
+                                    <li><NavLink to="/f1">F1</NavLink></li>
+                                    <li><NavLink to="/cricket">Cricket</NavLink></li>
                                 </ul>
                             </li>
                             <li onClick={handleClick}>
-                                <a href="#">Entertainment</a>
+                                <NavLink to="/">Entertainment</NavLink>
 
                                 <ul>
-                                    <li><a href="#">Music</a></li>
-                                    <li><a href="#">Cinema</a></li>
+                                    <li><NavLink to="/music">Music</NavLink></li>
+                                    <li><NavLink to="/cinema">Cinema</NavLink></li>
 
                                 </ul>
                             </li>
-                            <li><a href="#">Weather</a></li>
-                            <li><a href="#">Food Order</a></li>
-                            <li><a href="#">Registration/Login</a></li>
+                            <li><NavLink to="/weather">Weather</NavLink></li>
+                            <li><NavLink to="/foodorder">Food Order</NavLink></li>
+                            <li><NavLink to="/registration">Registration/Login</NavLink></li>
 
                             {width < 991 && (<input type="text" class="mobile-search" placeholder="Search..." />)}
                         </ul>
