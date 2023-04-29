@@ -55,7 +55,6 @@ const Header = () => {
 
                                 <ul>
                                     <li><NavLink to="/football">Football</NavLink></li>
-                                    <li><NavLink to="/f1">F1</NavLink></li>
                                     <li><NavLink to="/cricket">Cricket</NavLink></li>
                                 </ul>
                             </li>
@@ -68,7 +67,7 @@ const Header = () => {
 
                                 </ul>
                             </li>
-                            <li><NavLink to="/weather">Weather</NavLink></li>
+                            <li><NavLink to="/register">Register</NavLink></li>
                             <li><NavLink to="/foodorder">Food Order</NavLink></li>
                             <li><NavLink to="/registration">Registration/Login</NavLink></li>
 
