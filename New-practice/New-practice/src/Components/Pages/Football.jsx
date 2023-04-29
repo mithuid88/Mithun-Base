@@ -14,13 +14,53 @@ import './Football.scss'
 const Football = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [tableData, setTableData] = useState([]);
+    const [seriaTable, setSeriaTable] = useState([]);
+    const [spanishTable, setSpanishTable] = useState([]);
+    const [bundesTable, setBundesTable] = useState([]);
 
     useEffect(() => {
         const fetchApi = fetch("../../../src/json/pl.json")
         fetchApi.then(response => response.json())
             .then(data => setTableData(data.pltable.all))
             .catch(error => console.error(error));
+
+        async function fetchTableData() {
+            try {
+                const response = await fetch("../../../src/json/seria.json");
+                const data = await response.json();
+                setSeriaTable(data.seriatable.all);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchTableData();
+
+        async function fetchspanishData() {
+            try {
+                const response = await fetch("../../../src/json/laliga.json");
+                const data = await response.json();
+                setSpanishTable(data.spanishTable.all);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchspanishData();
+
+        async function fetchbundesData() {
+            try {
+                const response = await fetch("../../../src/json/bundesliga.json");
+                const data = await response.json();
+                setBundesTable(data.bundesliga.all);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchbundesData();
+
+
     }, []);
+
+
 
     const [showComponent, setShowComponent] = useState(false);
     useEffect(() => {
@@ -85,12 +125,93 @@ const Football = () => {
             </div>
             <div className="fb-stats container italian" id="seriaa">
                 <h1>Seria table</h1>
+                <table id="seriaTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Played</th>
+                            <th>Wins</th>
+                            <th>Loss</th>
+                            <th>Points</th>
+
+                            <th>Goal Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {seriaTable.map(item => (
+                            <tr key={item.idx}>
+                                <td>{item.idx}</td>
+                                <td>{item.name}</td>
+                                <td>{item.played}</td>
+                                <td>{item.wins}</td>
+                                <td>{item.losses}</td>
+                                <td>{item.pts}</td>
+                                <td>{item.goalConDiff}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
             <div className="fb-stats container spanish" id="laliga">
                 <h1>Spanish table</h1>
+                <table id="spanishTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Played</th>
+                            <th>Wins</th>
+                            <th>Loss</th>
+                            <th>Points</th>
+
+                            <th>Goal Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {spanishTable.map(item => (
+                            <tr key={item.idx}>
+                                <td>{item.idx}</td>
+                                <td>{item.name}</td>
+                                <td>{item.played}</td>
+                                <td>{item.wins}</td>
+                                <td>{item.losses}</td>
+                                <td>{item.pts}</td>
+                                <td>{item.goalConDiff}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
             <div className="fb-stats container german" id="bundesliga">
                 <h1>Bundesiga table</h1>
+                <table id="bundesTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Played</th>
+                            <th>Wins</th>
+                            <th>Loss</th>
+                            <th>Points</th>
+
+                            <th>Goal Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {bundesTable.map(item => (
+                            <tr key={item.idx}>
+                                <td>{item.idx}</td>
+                                <td>{item.name}</td>
+                                <td>{item.played}</td>
+                                <td>{item.wins}</td>
+                                <td>{item.losses}</td>
+                                <td>{item.pts}</td>
+                                <td>{item.goalConDiff}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
 
 
