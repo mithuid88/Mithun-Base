@@ -7,6 +7,7 @@ import Modal from '../Molecules/Modal.jsx'
 import Overlay from '../Atoms/Overlay.jsx'
 import { useState, useEffect } from 'react'
 import Stickyheader from '../Atoms/Stickyheader.jsx'
+import Todo from '../Molecules/Todo.jsx'
 
 const Clothes = () => {
     const [showComponent, setShowComponent] = useState(false);
@@ -34,7 +35,7 @@ const Clothes = () => {
                 <Links />
             </Stickyheader>
 
-
+            <Todo />
 
             <Backtotop />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a maximus leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer scelerisque faucibus sapien vitae pellentesque. Morbi maximus metus id lorem porta, vitae consectetur sapien interdum. Curabitur sit amet ex vel urna bibendum scelerisque. Donec hendrerit luctus neque vel elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sit amet aliquam elit. Morbi volutpat suscipit arcu, eget aliquam tortor blandit eget. Vivamus eget ornare justo.

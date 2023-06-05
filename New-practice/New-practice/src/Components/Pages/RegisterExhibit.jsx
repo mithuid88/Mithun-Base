@@ -2,17 +2,13 @@ import React from 'react'
 import Header from '../Organisms/Header.jsx'
 import Backtotop from '../Molecules/Backtotop.jsx'
 import Footer from '../Organisms/Footer.jsx'
+
 import Modal from '../Molecules/Modal.jsx'
 import Overlay from '../Atoms/Overlay.jsx'
 import { useState, useEffect } from 'react'
-import SchoolRegister from '../Organisms/SchoolRegister.jsx'
+import RegisterForm from '../Organisms/RegisterForm.jsx'
 
-
-const Registration = () => {
-    const handleSubmit = (values) => {
-
-        console.log(values);
-    };
+const RegisterExhibit = () => {
     const [showComponent, setShowComponent] = useState(false);
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -32,8 +28,9 @@ const Registration = () => {
     return (
         <>
             <Header />
-            <SchoolRegister onSubmit={handleSubmit} />
+            <RegisterForm />
             <Backtotop />
+            <h1>RegisterExhibit</h1>
             {showComponent && (
                 <>
                     <Modal onClick={closeModal} />
@@ -41,9 +38,12 @@ const Registration = () => {
                 </>
             )}
             <Footer />
+
         </>
+
     )
+
 }
 
 
-export default Registration
+export default RegisterExhibit

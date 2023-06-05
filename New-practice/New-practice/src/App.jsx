@@ -7,12 +7,14 @@ import Football from './Components/Pages/Football';
 import Music from './Components/Pages/Music';
 import Registration from './Components/Pages/Registration';
 import Shoes from './Components/Pages/Shoes';
-import Register from './Components/Pages/Register';
+import RegisterExhibit from './Components/Pages/RegisterExhibit';
 import Cricket from './Components/Pages/Cricket';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+
 
 
 
@@ -51,8 +53,8 @@ const router = createBrowserRouter([
     element: <Shoes />
   },
   {
-    path: "register",
-    element: <Register />
+    path: "registerexhibit",
+    element: <RegisterExhibit />
 
   },
   {
@@ -65,7 +67,13 @@ const router = createBrowserRouter([
 
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+
+    <RouterProvider router={router} />
+
+
+
+  )
 }
 
 export default App;
