@@ -67,7 +67,7 @@ const Header = () => {
 
                                 </ul>
                             </li>
-                            <li><NavLink to="/register">Register</NavLink></li>
+                            <li><NavLink to="/registerexhibit">Exhibition Register</NavLink></li>
                             <li><NavLink to="/foodorder">Food Order</NavLink></li>
                             <li><NavLink to="/registration">Registration/Login</NavLink></li>
 
