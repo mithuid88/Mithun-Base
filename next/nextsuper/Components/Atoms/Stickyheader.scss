@@ -1,0 +1,28 @@
+.sticky-header {
+    background-color: #94b61c;
+    transition: 0.2s;
+    position: static;
+
+    &.is-sticky {
+        position: sticky;
+        top: 94px;
+    }
+
+    a {
+        color: red;
+        font-weight: 600;
+        padding: 12px 15px;
+
+        &:hover {
+            color: #2236ac;
+        }
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 25px 0;
+    }
+}

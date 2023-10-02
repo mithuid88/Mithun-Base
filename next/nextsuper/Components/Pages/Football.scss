@@ -1,0 +1,30 @@
+.date-section {
+    margin: 30px auto;
+}
+
+
+
+.fb-stats {
+    margin-bottom: 20px;
+
+    h1 {
+        color: red;
+        text-align: center;
+    }
+
+    table {
+        color: rgb(138, 30, 30);
+        border: 2px solid red;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+
+        thead {
+            background-color: aqua;
+        }
+
+        td {
+            border: 1px solid blue;
+        }
+    }
+}
