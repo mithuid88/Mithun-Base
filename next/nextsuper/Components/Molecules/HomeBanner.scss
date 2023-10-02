@@ -1,0 +1,40 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    &.maroon {
+        background-color: #800000;
+    }
+
+    &.lime-green {
+        background-color: #32CD32;
+    }
+
+    &.aqua {
+        background-color: #00FFFF;
+    }
+
+    &.red {
+        background-color: #FF0000;
+    }
+
+    &.orange {
+        background-color: #FFA500;
+    }
+
+    &.yellow {
+        background-color: #FFFF00;
+    }
+
+    &.blue {
+        background-color: #0000FF;
+    }
+
+    a {
+        color: #ffffff;
+        text-shadow: #b784be -1px -2px 0px;
+        font-size: 35px;
+    }
+}
