@@ -1,0 +1,48 @@
+.card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card-parent {
+        background-color: #00b7ff;
+        border: 2px solid rgb(74, 62, 180);
+        width: 45%;
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding: 15px;
+
+        .btn-wrap {
+            display: flex;
+
+            button {
+                width: 70px;
+
+            }
+
+            span {
+                width: 70px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    a {
+        background-color: #40e9e9;
+        padding: 12px;
+        border-radius: 12px;
+        color: #ffffff;
+        border: 2px solid #40e9e9;
+        padding: 12px;
+        transition: 0.2s;
+        margin-top: 25px;
+
+        &:hover {
+            color: #40e9e9;
+            background-color: #ffffff;
+            border: 2px solid #40e9e9;
+
+        }
+    }
+}
