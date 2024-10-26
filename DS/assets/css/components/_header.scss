@@ -1,0 +1,305 @@
+.gds-header-main {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 96px;
+  @media (max-width: 991px) {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .btn{
+    padding: 8px 24px;
+    font-size: 14px;
+    @include mobile-landscape{
+      padding: 8px 12px; 
+    }
+  }
+  .gds-search__button {
+    .search_icon {
+      padding: 0 16px 0 24px;
+    }
+    @include mobile{
+      img{
+        max-width:96px;
+      }
+    }
+  }
+  @media (max-width:991px) {
+    .gds-logo{
+      img{
+          max-width:140px;
+      }
+    }
+  }
+  .navbar {
+    padding: 0;
+    .gds-dropdown-mega-menu{
+      &.dropdown-list{
+        ul{
+         display: none !important;
+        }
+        a{
+          img{
+            transition: 0.20s;
+            transform: rotateX(9deg);
+           }
+        }
+       }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: center;
+    }
+    li {
+      // position: relative;
+      img {
+        margin-left: 5px;
+      }
+    }
+    >ul {
+      >li {
+        white-space: nowrap;
+        padding: 12px 22px;
+        border-radius: 2px;
+        border: 1px solid $disable;
+        @media (max-width:991px) {
+          margin-bottom: 4px;
+        }
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+      white-space: nowrap;
+      position: relative;
+    }
+    .gds-dropdown-mega-menu {
+      ul {
+        display: block;
+        position: absolute;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        left: 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        background: $white-000;
+        transition: 0.3s;
+        border-radius: 4px;
+        li {
+          min-width: 220px;
+        }
+  
+        a {
+          padding: 10px 20px;
+          font-size: 15px;
+          text-transform: none;
+          font-weight: 400;
+        }
+      }
+      &:hover {
+        >ul {
+          opacity: 1;
+          top: 100%;
+          visibility: visible;
+          @include mobile-landscape{
+            width: 100%;
+          }
+        }
+        img{
+         transition: 0.20s;
+         transform: rotateX(180deg);
+        }
+      }
+      .gds-dropdown-mega-menu {
+        ul {
+          top: 0;
+          left: calc(100% - 30px);
+          visibility: hidden;
+        }
+  
+        &:hover {
+          >ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+//horizontal menu
+&.menu_header{
+  .navbar-nav{
+    flex-direction: row;
+    position: relative;
+    @media (max-width:991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: $action-100;
+    }
+    li{
+      padding-right: 24px;
+      @media (max-width:991px) {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        @media (max-width:991px) {
+          padding: 0;
+        }
+      }
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        min-width: 100px;
+        z-index: 15;
+        transition: all 0.3s ease;
+        padding-top: 34px;
+        border: 0;
+        li{
+          background-color: $white-000;
+          border-right: 1px solid $grey-080;
+          border-left: 1px solid $grey-080;
+          min-width: 172px;
+          padding: 0;
+          a{
+             padding: 8px 12px;
+             width: 100%;
+             display: block;
+             &.is-active{
+              color: $white-000 !important;
+              background-color: $primary-000;
+              font-weight: 700;
+            }
+          }
+          &:first-child{
+            border-top: 1px solid $grey-080;
+            border-radius: 4px 4px 0 0;
+            padding-top: 12px;
+          } 
+          &:last-child{
+            border-bottom: 1px solid $grey-080;
+            border-radius:0 0 4px 4px;
+            padding-bottom: 12px;
+          }
+        }
+      }
+    
+      &:hover .dropdown-menu {
+        display: block;
+      }
+    
+      &:hover svg {
+        transform: rotate(180deg);
+      }
+    }  
+  }
+  .gds-mega-menu-order{
+    @media (max-width:991px) {
+      order: 3 !important;
+    }
+    @media (max-width:991px) {
+      .navbar-collapse{
+        position: fixed;
+        background: $secondary-000;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 15%;
+        z-index: 12;
+      }
+     }
+   }
+   .navbar-toggler{
+    border: 0;
+    &:focus {
+      box-shadow:none;
+  }
+   }
+   //hamburger styles
+   .navbar-toggler-icon {
+    background-image: none !important;
+    background-color: $white-000;
+    height: 2px;
+    width: 25px;
+    margin: 10px 0;
+    position: relative;
+    transition: all 0.35s ease-out;
+    transform-origin: center;
+  
+    &::before {
+      display: block;
+      background-color: $white-000;
+      height: 2px;
+      content: "";
+      position: relative;
+      top: -7px;
+      transition: all 0.15s ease-out;
+  
+      /*taken down to hide quicker*/
+      transform-origin: center;
+    }
+  
+    &::after {
+      display: block;
+      background-color: $white-000;
+      height: 2px;
+      content: "";
+      position: relative;
+      top: 4px;
+      transition: all 0.35s ease-out;
+      transform-origin: center;
+    }
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    background-color: $white-000;
+  
+    &::before, &::after {
+      background-color: $white-000;
+    }
+  }
+  
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    transform: rotate(45deg);
+  
+    &::before {
+      opacity: 0;
+    }
+  
+    &::after {
+      transform: rotate(-90deg) translateX(7px);
+    }
+  }
+  
+}
+}
+
+
+
+
+
+
+
+

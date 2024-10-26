@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Storybook index page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+<style>
+    .index-page {
+        margin: 24px 0;
+    }
+
+    .index-page ol {
+        list-style-type: none;
+        padding-left: 35px;
+        counter-reset: main-counter;
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    .index-page ol>li {
+        counter-increment: main-counter;
+        position: relative;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        break-inside: avoid;
+    }
+
+    .index-page ol>li::before {
+        content: counter(main-counter) ". ";
+        position: absolute;
+        left: -28px;
+        font-weight: bold;
+    }
+
+    .index-page ol ol {
+        list-style-type: none;
+        padding-left: 40px;
+        counter-reset: sub-counter;
+        margin-bottom: 6px;
+    }
+
+    .index-page ol>li>ol>li {
+        counter-increment: sub-counter;
+        position: relative;
+    }
+
+    .index-page ol>li>ol>li::before {
+        content: counter(main-counter) "." counter(sub-counter) " ";
+        position: absolute;
+        left: -40px;
+        font-weight: normal;
+
+    }
+
+
+    @media (max-width: 767px) {
+        .index-page ol {
+            column-count: 1;
+        }
+    }
+</style>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="index-page">
+                    <h1>Design System Drupal User Manual 1.0</h1>
+                    <h2>Contents</h2>
+                    <ol class="main-list">
+                        <li><a href="#">Document Overview</a>
+                            <ol>
+                                <li><a href="#">Introduction</a></li>
+                                <li><a href="#">Intended Audience</a></li>
+                                <li><a href="#">Installation (IDS Profile)</a></li>
+                                <li><a href="#">Sub Theme creation</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Prerequisites</a>
+                            <ol>
+                                <li><a href="#">Mercury editor Configuration</a></li>
+                                <li><a href="#">Google JSON API</a></li>
+                                <li><a href="#">Email Notification Configuration (optional)</a></li>
+                                <li><a href="#">Schema configuration</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Core & Layout</a></li>
+                        <li><a href="#">Design System Components</a>
+                            <ol>
+                                <li><a href="#">Base Components</a></li>
+                                <li><a href="#">Components defined in Figma</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Heading</a></li>
+                        <li><a href="#">Text</a>
+                            <ol>
+                                <li><a href="#">Footnote</a></li>
+                                <li><a href="#">Reference</a></li>
+                                <li><a href="#">Location</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Image</a></li>
+                        <li><a href="#">Buttons</a>
+                            <ol>
+                                <li><a href="#">Contrast Primary Buttons</a></li>
+                                <li><a href="#">Contrast Secondary Buttons</a></li>
+                                <li><a href="#">Secondary Buttons</a></li>
+                                <li><a href="#">Small Contrast Secondary Buttons</a></li>
+                                <li><a href="#">Small Primary Buttons</a></li>
+                                <li><a href="#">Small Secondary Buttons</a></li>
+                                <li><a href="#">Button Group</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Links</a>
+                            <ol>
+                                <li><a href="#">Link Group</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Date and Time</a></li>
+                        <li><a href="#">Site Structure</a>
+                            <ol>
+                                <li><a href="#">Header Region</a></li>
+                                <li><a href="#">Footer Region</a></li>
+                                <li><a href="#">Content Region</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Header</a>
+                            <ol>
+                                <li><a href="#">Header Logo</a></li>
+                                <li><a href="#">Information Bar</a></li>
+                                <li><a href="#">Meta Navigation</a></li>
+                                <li><a href="#">Main Navigation</a></li>
+                                <li><a href="#">Button</a></li>
+                                <li><a href="#">Search</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Footer</a>
+                            <ol>
+                                <li><a href="#">Footer Logos</a></li>
+                                <li><a href="#">Footer Menu</a></li>
+                                <li><a href="#">Footer Bottom Block</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Accordion</a>
+                            <ol>
+                                <li><a href="#">Accordion With Fill</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Banner</a>
+                            <ol>
+                                <li><a href="#">Text Block Banner</a></li>
+                                <li><a href="#">Gradient Banner</a></li>
+                                <li><a href="#">Media Banner</a></li>
+                                <li><a href="#">Two Column/Split Banner</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Breadcrumb</a></li>
+                        <li><a href="#">Article Navigation</a></li>
+                        <li><a href="#">Article Sticky Side nav</a></li>
+                        <li><a href="#">Card</a>
+                            <ol>
+                                <li><a href="#">Call Out Card</a></li>
+                                <li><a href="#">Card Details Card</a></li>
+                                <li><a href="#">Image Background Card</a></li>
+                                <li><a href="#">Image on Side Card</a></li>
+                                <li><a href="#">Image on Top Card</a></li>
+                                <li><a href="#">Image on Side Overlay Card</a></li>
+                                <li><a href="#">Image on Side Split Card</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Carousel</a>
+                            <ol>
+                                <li><a href="#">Cards Carousel</a></li>
+                                <li><a href="#">Fifty Fifty Carousel</a></li>
+                                <li><a href="#">Full Width Carousel</a></li>
+                                <li><a href="#">Key Facts Carousel</a></li>
+                                <li><a href="#">Media Carousel</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Image Placeholder</a>
+                            <ol>
+                                <li><a href="#">Blurred Image</a></li>
+                                <li><a href="#">Zoom Image</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Image Slider</a></li>
+                        <li><a href="#">ISI</a></li>
+                        <li><a href="#">Jump Links</a></li>
+                        <li><a href="#">Key Facts</a>
+                            <ol>
+                                <li><a href="#">Key Facts Big</a></li>
+                                <li><a href="#">Key Facts Image</a></li>
+                                <li><a href="#">Key Facts Image on Top</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Media</a>
+                            <ol>
+                                <li><a href="#">Overlay Media</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Modal Overlay</a></li>
+                        <li><a href="#">Quotes</a>
+                            <ol>
+                                <li><a href="#">Quotes Card</a></li>
+                                <li><a href="#">Quotes Full Width</a></li>
+                                <li><a href="#">Quotes Small Width</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Range Slider</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Table</a></li>
+                        <li><a href="#">Tabs</a></li>
+                        <li><a href="#">Tabs Image</a></li>
+                        <li><a href="#">Tags</a></li>
+                        <li><a href="#">Glossary of Terms</a></li>
+                        <li><a href="#">Sub Theme Steps</a></li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

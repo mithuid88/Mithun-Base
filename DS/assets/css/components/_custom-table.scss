@@ -1,0 +1,118 @@
+.custom-table {
+    display: flex;
+    justify-content: space-between;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            flex-basis: 33.33%;
+            max-width: 33.33%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 32px;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    .first-col {
+        .top-row {
+            border-right: 0;
+        }
+    }
+
+    .second-col {
+        .top-row {
+            border-right: 0;
+        }
+    }
+
+    .top-row {
+        padding: 16px;
+        border: 1px solid $white-000;
+        display: flex;
+        align-items: stretch;
+
+        @media (max-width: 767px) {
+            border-bottom: 0;
+            border-top: 0;
+            border-color: $primary-000;
+        }
+    }
+
+    .third-col {
+        .main-row-heading {
+            border-right: 0.5px solid $primary-000;
+        }
+    }
+
+    .main-row-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: $accent-300;
+        border-left: 0.5px solid $primary-000;
+        border-bottom: 0.5px solid $primary-000;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            border: 0.5px solid $primary-000;
+        }
+
+        .sub-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            img {
+                align-self: flex-end;
+                margin-top: auto;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .custom-table {
+            display: flex;
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            .top-row,
+            .main-row-heading {
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .custom-table {
+            display: block;
+
+            .top-row,
+            .main-row-heading {
+                display: block;
+            }
+        }
+    }
+}

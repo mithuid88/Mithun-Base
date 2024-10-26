@@ -1,0 +1,73 @@
+
+/*Poppins*/
+@font-face{
+    font-family:'poppins';
+    font-weight:400;
+    src:url('../fonts/Poppins/Poppins-Regular.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family:'poppins';
+    font-weight:400;
+    font-style: italic;
+    src:url('../fonts/Poppins/Poppins-Italic.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family:'poppins';
+    font-style: italic;
+    font-weight:500;
+    src:url('../fonts/Poppins/Poppins-MediumItalic.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family:'poppins';
+    font-weight:600;
+    src:url('../fonts/Poppins/Poppins-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family:'poppins';
+    font-weight:500;
+    src:url('../fonts/Poppins/Poppins-Medium.woff') format('woff');
+    font-display: swap;
+}
+@font-face{
+    font-family:'poppins';
+    font-weight:700;
+    src:url('../fonts/Poppins/Poppins-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+/* Gobold */
+@font-face{
+    font-family:'gobold-bold';
+    src:url('../fonts/gobold-cufonfonts/Gobold Bold.otf') format('OpenType');
+    font-display: swap;
+}
+@font-face{
+    font-family:'Gobold-Lowplus';
+    src:url('../fonts/gobold-cufonfonts/Gobold-Lowplus-new.otf') format('OpenType');
+    font-display: swap;
+}
+@font-face{
+    font-family:'gobold-bold-regular';
+    src:url('../fonts/gobold-cufonfonts/Gobold Regular.otf') format('OpenType');
+    font-display: swap;
+}
+@font-face{
+    font-family:'gobold-hollow-bold';
+    src:url('../fonts/gobold-cufonfonts/Gobold Hollow Bold.otf') format('OpenType');
+    font-display: swap;
+}
+
+.ff-poppins{
+    font-family:'poppins';
+}
+.ff-gobold{
+    font-family:'gobold-bold-regular';
+}
+
+
+
+

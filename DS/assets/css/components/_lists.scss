@@ -1,0 +1,85 @@
+.gds-unordered {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 30px;
+
+    &.large-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &.medium-list {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &.small-list {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    li {
+        color: $grey-000;
+        position: relative;
+        margin-bottom: 8px;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: $primary-000;
+            border-radius: 50%;
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+.gds-ordered {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 30px;
+
+    li {
+        color: $grey-000;
+        position: relative;
+        margin-bottom: 8px;
+        counter-increment: my-counter;
+
+        &::before {
+            content: counter(my-counter) ". ";
+            color: $primary-000;
+            font-size: inherit;
+            line-height: inherit;
+            position: absolute;
+            left: -20px;
+            top: 12px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.large-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &.medium-list {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &.small-list {
+        font-size: 12px;
+        line-height: 16px;
+
+        li {
+            &::before {
+                top: 8px;
+
+            }
+        }
+    }
+}

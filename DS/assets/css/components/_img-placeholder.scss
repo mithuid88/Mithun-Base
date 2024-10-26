@@ -1,0 +1,122 @@
+.gds-blur-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .gds-img-wrapper {
+        position: relative;
+        text-align: center;
+        display: inline-block;
+
+        .gds-main-imgwrap {
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                background-color: rgba(241, 241, 241, 0.50);
+                backdrop-filter: blur(8px);
+                filter: blur(5px);
+            }
+        }
+
+        .gds-img-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            z-index: 2;
+
+
+            img {
+                max-width: 100%;
+                height: auto;
+
+            }
+
+            p {
+                color: $blur-100;
+                margin-top: 10px;
+                white-space: nowrap;
+
+            }
+        }
+
+        .bottom-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 3;
+
+        }
+
+        .bottom-txt {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: $blur-100;
+            cursor: pointer;
+            z-index: 3;
+            background-color: $accent-000;
+            padding: 6px 8px;
+
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background-image: url(../images/eye-on.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative;
+                top: 2px;
+                left: -4px;
+                margin-right: 3px;
+            }
+
+        }
+
+        &.no-blur {
+            .gds-main-imgwrap {
+                img {
+                    filter: none;
+                    background-color: $white-000;
+                    backdrop-filter: none;
+                }
+
+            }
+
+            .bottom-txt {
+                &:before {
+                    background-image: url(../images/eye-off-small.svg);
+
+                    top: 2px;
+                    left: -4px;
+                }
+            }
+
+        }
+
+        .bottom-txt {
+            .add-txt {
+                display: none;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .remove-txt {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        .bottom-txt-text {
+            pointer-events: auto;
+        }
+    }
+}

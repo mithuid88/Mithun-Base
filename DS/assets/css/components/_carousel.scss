@@ -1,0 +1,909 @@
+.gds-carousel {
+    .gds-video-placeholder {
+        @media (max-width: 991px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // global carousel
+    .gds-slider-desktop {
+        display: none;
+
+        @media (min-width: 992px) {
+            display: block;
+        }
+    }
+
+    .gds-slider-tablet {
+        display: none;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            display: block;
+        }
+    }
+
+    .gds-slider-mobile {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    .slick-slide {
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .heading-bold {
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .gds-carousel__actions {
+        @media (max-width: 767px) {
+            border-bottom: 0.5px solid $grey-009;
+            padding-bottom: 35px;
+        }
+    }
+
+    .gds-carousel__content {
+        @media (max-width: 767px) {
+            padding-bottom: 60px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 0;
+        right: calc(100% - 90%);
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 40px;
+        display: flex;
+        justify-content: flex-end;
+        top: auto;
+        list-style: none;
+        align-items: flex-end;
+        height: 10px;
+
+        @media (max-width: 767px) {
+            position: relative;
+            left: auto;
+            right: auto;
+            justify-content: center;
+            align-items: center;
+            top: -18px;
+            bottom: auto;
+        }
+
+        button {
+            font-size: 0;
+            width: 14px;
+            height: 14px;
+            background-color: $white-000;
+            border-radius: 50%;
+            border: 1px solid $primary-100;
+            padding: 5px;
+            margin-right: 16px;
+        }
+
+        .slick-active {
+            button {
+                background-color: $primary-100;
+            }
+        }
+    }
+
+    .slide-arrow {
+        position: absolute;
+        top: 78%;
+
+        z-index: 2;
+        background-color: transparent;
+
+        @media (max-width: 767px) {
+            top: 88%;
+            transform: translateY(-50%);
+        }
+
+        &.prev-arrow {
+            left: auto;
+            width: 32px;
+            height: 32px;
+            outline: none;
+            border: 0;
+
+            color: $primary-100;
+            right: 70px;
+            background-image: url(../images/carousel-left-arrow.svg);
+            background-size: 32px 32px;
+
+            @media (max-width: 767px) {
+                right: 55%;
+            }
+
+            &:focus-visible {
+                outline-offset: 3px;
+                outline: 1.5px dotted $primary-000;
+            }
+        }
+
+        &.next-arrow {
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            outline: none;
+            border: 0;
+
+            color: $primary-100;
+            background-image: url(../images/carousel-right-arrow.svg);
+            background-size: 32px 32px;
+
+            @media (max-width: 767px) {
+                right: 45%;
+            }
+
+            &:focus-visible {
+                outline-offset: 3px;
+                outline: 1.5px dotted $primary-000;
+            }
+        }
+    }
+
+    &.thirty-seventy-carousel {
+        .slick-dots {
+            bottom: -35px;
+
+            @include desktop-small {
+                right: 15%;
+                bottom: 0;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                bottom: 0;
+                top: 0;
+            }
+        }
+
+        .slide-arrow {
+            top: 102%;
+
+            @media (min-width: 1024px) and (max-width: 1200px) {
+                top: 104%;
+            }
+
+            @include desktop-small {
+                top: 93%;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                top: 94%;
+                bottom: 0;
+                margin: 0 auto;
+            }
+
+            &.prev-arrow {
+                right: 60px;
+
+
+
+                @media (max-width: 767px) {
+                    right: 55px;
+                    left: 0;
+                }
+            }
+
+            &.next-arrow {
+                right: 0;
+
+
+                @media (max-width: 767px) {
+                    right: 0;
+                    left: 67px;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .gds-carousel__content .heading-bold {
+            @media (min-width: 1200px) {
+                padding-top: 24px;
+            }
+        }
+
+        .row>* {
+            @media (max-width: 767px) {
+                padding: 0;
+            }
+        }
+
+        .col-lg-4 {
+            .gds-carousel__content {
+                @media (max-width: 767px) and (min-width: 577px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+
+    &.full-width-carousel {
+        .gds-carousel__actions {
+            @media (max-width: 767px) {
+                padding-bottom: 17px;
+            }
+        }
+
+        .slick-dots {
+            bottom: 19px;
+
+            @include desktop-small {
+                right: 15%;
+                bottom: 2px;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: 0 auto;
+            }
+        }
+
+        .slide-arrow {
+            top: 93%;
+
+            @include desktop-small {
+                top: 96%;
+            }
+
+            @media (max-width: 767px) {
+                top: 92%;
+                margin: 0 auto;
+            }
+
+            &.prev-arrow {
+
+
+                @media (max-width: 767px) {
+                    right: 55px;
+                    left: 0;
+                }
+            }
+
+            &.next-arrow {
+
+
+                @media (max-width: 767px) {
+                    right: 0;
+                    left: 67px;
+                }
+            }
+        }
+
+        .gds-carousel-slider {
+            position: relative;
+            padding: 0;
+
+            @include desktop-small {
+                padding: 0;
+            }
+
+            @media (max-width: 767px) {
+                padding-bottom: 60px;
+            }
+
+            .gds-slider-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                height: 100%;
+                width: 100%;
+
+                img {
+
+                    height: auto;
+                    width: 100%;
+                }
+
+                @include desktop-small {
+                    position: static;
+                }
+
+                .gds-slider-desktop {
+                    img {
+                        height: 682px;
+                    }
+                }
+            }
+
+            .gds-slider-content {
+                margin: 0 auto;
+
+                padding: 210px 0px;
+                position: relative;
+                z-index: 2;
+
+                @include desktop-small {
+                    padding: 20px 0;
+                }
+
+                p {
+                    margin-top: 18px;
+
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 0;
+
+                    @include desktop-small {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+
+                .gds-carousel__content {
+                    padding: 0;
+                    position: relative;
+                    z-index: 2;
+                    max-width: 592px;
+                    padding: 24px;
+
+                    @include desktop-small {
+                        margin-top: 0;
+                        padding: 0;
+                    }
+
+                    .gds-btn-wrapper {
+                        margin-right: 25px;
+                        align-items: center;
+
+                        @include mobile {
+                            margin-right: 0;
+                            margin-bottom: 16px;
+                        }
+
+                        .right-arrow-btn {
+                            color: $primary-000;
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 400;
+
+                            &:after {
+                                content: "";
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                background-image: url("../images/icon-right-angle.png");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                margin-left: 5px;
+                                position: relative;
+                                top: 4px;
+                            }
+                        }
+                    }
+
+                    @include mobile {
+                        margin-top: var(--spacer-m);
+                    }
+
+                    p,
+                    h1 {
+                        color: $grey-090;
+                    }
+                }
+            }
+        }
+    }
+
+    &.fifty-fifty-carousel {
+        background-color: $accent-100 !important;
+        padding: 24px 0;
+
+        @include desktop-small {
+            padding: 24px 0 50px 0;
+
+        }
+
+        @media (max-width: 767px) {
+            padding: 24px 0 27px 0;
+            margin-top: 20px;
+        }
+
+        .gds-carousel-parent {
+            @media (min-width: 1280px) {
+                max-width: 1216px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (min-width: 1400px) {
+                max-width: 1320px;
+            }
+        }
+
+        .slide-arrow {
+            top: 96%;
+            right: 58px;
+
+            @media (max-width: 1200px) {
+                top: 85%;
+            }
+
+            @include desktop-small {
+                top: 98%;
+            }
+
+            @media (max-width: 767px) {
+                top: 93%;
+                margin: 0 auto;
+            }
+
+            &.prev-arrow {
+
+
+                @media (max-width: 767px) {
+                    right: 55px;
+                    left: 0;
+                }
+            }
+
+            &.next-arrow {
+                right: 30px;
+
+
+
+                @media (max-width: 767px) {
+                    right: 0;
+                    left: 67px;
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: 0;
+            top: auto;
+
+            @media (max-width: 1200px) {
+                bottom: 20px;
+            }
+
+            @include desktop-small {
+                right: 15%;
+                bottom: -10px;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                bottom: 0;
+                top: 0;
+            }
+        }
+
+        .gds-carousel__content {
+            @media (min-width: 768px) {
+                margin-top: 40px;
+            }
+
+            @include desktop-small {
+                margin-top: 0;
+                padding-top: 24px;
+            }
+        }
+
+        .gds-btn-wrapper {
+            margin-bottom: 12px;
+        }
+
+        @include mobile {
+            .gds-carousel__actions {
+                border-bottom: 0.5px solid $white-000;
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &.cards-carousel {
+        padding: 32px 0 88px;
+
+        @include desktop-small {
+            padding: 24px 16px 40px;
+            padding-bottom: 65px;
+        }
+
+        @include mobile {
+            padding: 24px 0 40px;
+        }
+
+        .slick-slide {
+            padding: 0 16px;
+
+
+
+            @include mobile {
+                padding: 0;
+            }
+        }
+
+        .slide-arrow {
+            top: 104%;
+            color: #2c333a;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+
+            @include desktop-small {
+                top: 103%;
+            }
+
+            @media (min-width: 577px) and (max-width: 767px) {
+                top: 105%;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 18px;
+
+                line-height: 24px;
+            }
+
+            @media (max-width: 567px) {
+                top: 103%;
+            }
+
+            &.prev-arrow {
+                left: 14px;
+                padding-left: 18px;
+                width: 145px;
+
+                @media (max-width: 767px) {
+                    left: 0;
+                    width: 114px;
+                }
+
+                @media (min-width: 577px) and (max-width: 767px) {
+                    left: 15px;
+                }
+
+                @media (max-width: 567px) {
+                    right: 64%;
+                }
+
+                &:hover {
+                    color: $primary-600;
+                }
+
+                &:focus-visible {
+                    color: $primary-400;
+                    outline: 0.5px solid #333399;
+                }
+
+                &:active {
+                    color: #333399;
+                }
+            }
+
+            &.next-arrow {
+                right: 8px;
+                width: 100px;
+                background-position-x: right;
+
+                @include mobile {
+                    right: -5px;
+                    width: 88px;
+                }
+
+                span {
+                    position: relative;
+                    left: -2px;
+
+                    @include desktop-small {
+                        left: -6px;
+                    }
+                }
+
+                &:hover {
+                    color: $primary-600;
+                }
+
+                &:focus-visible {
+                    color: $primary-400;
+                    outline: 0.5px solid #333399;
+                }
+
+                &:active {
+                    color: #333399;
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -44px;
+            top: 0;
+
+            @media (max-width: 767px) {
+                right: 0;
+            }
+        }
+    }
+
+    &.keyfacts-carousel {
+        background-color: $accent-100;
+        padding: 32px 75px 96px;
+
+        @include desktop-small {
+            overflow-x: hidden;
+        }
+
+        @include desktop-small {
+            padding: 24px 16px 88px;
+        }
+
+        @include mobile {
+            padding: 24px 0 48px;
+        }
+
+        .slick-slide {
+            padding: 0 16px;
+
+
+
+            @include mobile {
+                padding: 0;
+            }
+        }
+
+        .slide-arrow {
+            top: 107%;
+            color: #2c333a;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+
+            @include desktop-small {
+                top: 102%;
+                font-size: 18px;
+
+                line-height: 24px;
+            }
+
+            @media (max-width: 767px) {
+                top: 104%;
+            }
+
+            &.prev-arrow {
+                left: 15px;
+                padding-left: 18px;
+                width: 145px;
+
+                @media (min-width: 577px) and (max-width: 767px) {
+                    left: 15px;
+                }
+
+                @media (max-width: 567px) {
+                    right: 64%;
+                    left: 2px;
+                }
+
+                @include desktop-small {
+                    width: 114px;
+                }
+
+                &:hover {
+                    color: $primary-600;
+                }
+
+                &:focus-visible {
+                    color: $primary-400;
+                    outline: 0.5px solid #333399;
+                }
+
+                &:active {
+                    color: #333399;
+                }
+            }
+
+            &.next-arrow {
+                right: 9px;
+                width: 100px;
+                background-position-x: right;
+
+                @include mobile {
+                    right: 1px;
+                }
+
+                @include desktop-small {
+                    width: 88px;
+                }
+
+                span {
+                    position: relative;
+                    left: -2px;
+
+                    @include desktop-small {
+                        left: -6px;
+                    }
+                }
+
+                &:hover {
+                    color: $primary-600;
+                }
+
+                &:focus-visible {
+                    color: $primary-400;
+                    outline: 0.5px solid #333399;
+                }
+
+                &:active {
+                    color: #333399;
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -52px;
+            top: 0;
+
+            @include desktop-small {
+                right: 15%;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                bottom: 0;
+                top: 31px;
+            }
+        }
+
+        .ids-key-facts {
+            .btn.btn-link-normal {
+                color: $primary-000;
+
+                svg path {
+                    stroke: $primary-000;
+                }
+            }
+        }
+    }
+
+    &.media-carousel {
+        padding: 0;
+        background-color: $accent-100;
+
+        @include desktop-small {
+            padding: 24px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 0;
+        }
+
+        .slide-arrow {
+            top: 96%;
+
+            @media (max-width: 1200px) {
+                top: 96%;
+            }
+
+            @media (max-width: 1024px) {
+                top: 97%;
+            }
+
+            @media (max-width: 767px) {
+                top: 94%;
+                margin: 0 auto;
+            }
+
+            &.prev-arrow {
+
+
+                @media (min-width: 1200px) {
+                    right: 50px;
+                }
+
+                @media (max-width: 767px) {
+                    right: 55px;
+                    left: 0;
+                }
+            }
+
+            &.next-arrow {
+
+
+                @media (min-width: 1200px) {
+                    right: 10px;
+                }
+
+                @media (max-width: 767px) {
+                    right: 0;
+                    left: 67px;
+                }
+            }
+        }
+
+        .slick-dots {
+            right: 9%;
+            bottom: 6px;
+
+            @media (max-width: 1200px) and (min-width: 992px) {
+                right: 13%;
+                bottom: 2px;
+            }
+
+            @include desktop-small {
+                right: 16%;
+                bottom: -2px;
+            }
+
+            @media (max-width: 767px) {
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .gds-carousel__content {
+            text-align: center;
+            padding: 32px 0;
+            padding-top: 40px;
+            padding-bottom: 0;
+
+            @include desktop-small {
+                margin-top: 0;
+                padding-top: 24px;
+            }
+
+            @media (max-width: 767px) {
+                padding-bottom: 60px;
+            }
+
+            .gds-btn-wrapper {
+                margin-right: 25px;
+                align-items: center;
+
+                @include mobile {
+                    display: block;
+                }
+
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .gds-carousel__actions {
+            @media (max-width: 767px) {
+                padding-bottom: 15px;
+            }
+        }
+
+        .separator {
+            display: none;
+
+            @media (max-width: 767px) {
+                display: block;
+                color: $grey-050;
+                height: 0.5px;
+                border: 0.5px solid $grey-050;
+            }
+        }
+    }
+}

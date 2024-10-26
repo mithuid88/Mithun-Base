@@ -1,0 +1,251 @@
+.gds-btn-wrapper {
+    display: inline-flex;
+}
+.btn {
+    display: inline-flex;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 13px 24px 15px 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    border-radius: 4px;
+    img{
+        width: 24px;
+        height: auto;
+     }
+    &:focus-visible {
+        outline: 1px solid $action-100;
+        box-shadow: none;
+    }
+    &.btn-light{
+        background-color: $white-000;
+        color: $secondary-000;
+        border: 2px solid $white-000;
+        &:active{
+            background-color: $white-000;
+        }
+        &:hover{
+            background-color: $grey-030;
+            color: $grey-000;
+            border-color: $grey-030;
+        }
+        &.gds-icon-right{
+            align-items: end;
+            span{
+             padding-left: var(--spacer-s);
+            }
+        }
+        &.gds-icon-left{
+            align-items: end;
+            span{
+             padding-right: var(--spacer-s);
+            }
+        }
+        &.gds-btn-icon{
+            padding:var(--spacer-s) ;
+        }
+        &.gds-small-light{
+            padding: var(--spacer-xs) var(--spacer-m);
+
+        }
+    }
+    &.btn:disabled{
+       background-color: $disable;
+       border-color: $disable;
+    }
+    //Primary btn styles
+    &.btn-primary{
+        background-color: $primary-000;
+        color: $white-000;
+      
+        &:active{
+            background-color: $secondary-000;
+        }
+        &:hover{
+            background-color: $action-100;
+        }
+        &.gds-icon-right{
+            align-items: end;
+            span{
+             padding-left: var(--spacer-s);
+            }
+        }
+        &.gds-icon-left{
+            align-items: end;
+            span{
+             padding-right: var(--spacer-s);
+            }
+        }
+        &.gds-btn-icon{
+            padding:var(--spacer-s);
+        }
+        &.gds-disabled{
+            opacity: .65;
+            cursor:not-allowed
+        }
+        &.gds-small-primary{
+            padding: var(--spacer-xs) var(--spacer-m);
+
+        }
+        
+    }
+    //info
+    &.btn-info{
+            background-color: $primary-600;
+            color: $white-000;
+            padding: 13px 24px 15px 24px;
+    }
+    //Secondary btn styles
+    &.btn-outline-primary{
+        color: $primary-000;
+        background-color: $bg-transparent;
+        border-radius: 4px;
+        border: 2px solid $primary-000;
+        &:active{
+            background-color: $white-000;
+            border-color: $secondary-000;
+            color: $secondary-000;
+        }
+        &:hover{
+            background-color: $white-000;
+            border-color: $action-100;
+            color: $action-100;
+        }
+        &.gds-icon-right{
+            align-items: end;
+            span{
+             padding-left: var(--spacer-s);
+            }
+        }
+        &.gds-icon-left{
+            align-items: end;
+            span{
+             padding-right: var(--spacer-s);
+            }
+        }
+        &.gds-btn-icon{
+            padding:var(--spacer-s) ;
+        }
+        &.gds-disabled{
+            opacity: .65;
+            cursor:not-allowed
+        }
+        &.gds-small-secondary{
+            padding: var(--spacer-xs) var(--spacer-m);
+
+        }
+    }
+    //Contrast btn styles
+    &.btn-outline-light{
+        color: $white-000;
+        background-color: $bg-transparent;
+        border-radius: 4px;
+        border: 2px solid $white-000;
+        &:active{
+            background-color: $secondary-000;
+            border-color: $white-000;
+            color: $white-000;
+        }
+        &:hover{
+            background-color: $action-100;
+            border-color: $white-000;
+            color: $white-000;
+        }
+        &.gds-icon-right{
+            align-items: end;
+            span{
+             padding-left: var(--spacer-s);
+            }
+        }
+        &.gds-icon-left{
+            align-items: end;
+            span{
+             padding-right: var(--spacer-s);
+            }
+        }
+        &.gds-btn-icon{
+            padding:var(--spacer-s) ;
+        }
+        &.gds-disabled{
+            opacity: .65;
+            cursor:not-allowed
+        }
+        &.gds-small-contrast{
+            padding: var(--spacer-xs) var(--spacer-m);
+        }
+    }
+    &.gds-btn-link{
+        color: $primary-400;
+        padding-left: 0;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        img{
+            width: 16px;
+            height: auto;
+        }
+        span{
+            padding-left: var(--spacer-xxs); 
+        }
+        &:hover{
+            color:$primary-600;
+        }
+    }
+}
+.primary-dark{     
+    .btn-primary{
+    background-color: $primary-000;
+    padding: 13px 24px 15px 24px;
+    &:hover{
+        border: 1px solid $white-000;
+        background-color: transparent;
+        color: $blur-100;
+        border-radius: 4px;
+    }
+  }
+}
+.info-dark {
+    .btn-info {
+        background-color: $primary-600;
+        color: $white-000;
+        padding: 13px 24px 15px 24px;
+        border-radius: 4px;
+        &:hover {
+            border: 1px solid $white-000;
+            background-color: transparent;
+            color: $white-000;
+            border-radius: 4px;
+        }
+    }
+}
+
+.right-arrow-btn {
+    color: #3768FF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/icon-right-angle.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+.contrast{
+    background-color: $primary-400;
+    h3,.gds-heading--m{
+        color: $white-000;
+    }
+}
