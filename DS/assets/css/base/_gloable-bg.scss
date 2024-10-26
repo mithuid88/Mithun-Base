@@ -1,0 +1,219 @@
+//metanav colors
+//Metanav-accent
+.gds-header-metanav-bg.metanav-accent {
+    background-color: $white-000;
+    .gds-metamenu__label-text{
+        color: $grey-000;
+    }
+    .gds-metamenu {
+        a {
+            color: $grey-000;
+            &:hover {
+                text-decoration: none;
+                color: $primary-100;
+            }
+        }
+    }
+}
+//Metanav-contrast
+.gds-header-metanav-bg.metanav-contrast {
+    background-color: $primary-100;
+        .gds-metamenu__label-text{
+            color: $white-000;
+        }
+        .gds-metamenu {
+            a{
+                color: $white-000;
+                &:hover{
+                    text-decoration: none;
+                    color: $white-000;
+                  }
+            }
+        }
+        .secondary-nav-container .prev-btn, .secondary-nav-container .next-btn {
+            background-color: $primary-100;
+        }
+}
+//Metanav-light 
+.gds-header-metanav-bg.metanav-light {
+    background-color: $white-000;
+        .gds-metamenu__label-text{
+            color: $grey-000;
+        }
+        .gds-metamenu {
+            a{ 
+                color: $grey-000;
+                &:hover{
+                    text-decoration: none;
+                    color: $primary-100;
+                  }
+            }
+        }
+        .secondary-nav-container .prev-btn, .secondary-nav-container .next-btn {
+            background-color: $white-000;
+        }
+}
+
+//header background color
+//header-light
+.gds-header-main.header-light {
+    background-color: $white-000;
+    .navbar a {
+        color: $primary-100;
+        &:hover {
+            color: $blur-100 ;
+        }
+    }
+
+    nav{
+        .navbar-nav{
+            li{
+                color: $blur-100;
+                path{
+                    stroke: $blur-100;
+                }
+                a{
+                    color: $blur-100;
+                    &.is-active{
+                        border-bottom: 2px solid $primary-000;
+                        color: $primary-000;
+                    }
+                }
+                ul.dropdown-menu{
+                    li{
+                        a{
+                            color: $primary-000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//header-contrast
+.gds-header-main.header-contrast {
+    background-color: $primary-100;
+    .navbar{
+        a{
+            color: $white-000;
+            &:hover{
+                color:$white-000;
+            }
+        }
+        .gds-dropdown-mega-menu {
+            ul {
+                a{
+                    color: $grey-000;
+                }
+            }
+        }
+    } 
+    nav{
+        .navbar-nav{
+            li{
+                color: $white-000;
+                path{
+                    stroke: $white-000;
+                }
+                a{
+                    color: $white-000;
+                    &.is-active{
+                        border-bottom: 2px solid $white-000;
+                        color: $white-000;
+                    }
+                }
+                ul.dropdown-menu{
+                    li{
+                        a{
+                            color: $primary-000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Footer background colors
+//Footer contrast
+.gds-footer.footer-contrast{
+    .gds-footer-inner {
+        background-color: $secondary-000;
+        .gds-footer-sitemap{
+            li{
+                a{
+                    &.gds-link{
+                        color: $white-000;
+                    }
+                }
+            }
+        }
+        .gds-footer-legal-section{
+            p{
+                color: $white-000;
+            }
+        }
+    }
+} 
+
+//Footer accent-100
+.gds-footer.footer-light{
+    .gds-footer-inner {
+        background-color: $white-000;
+        .gds-footer-sitemap{
+            li{
+                a{
+                    &.gds-link{
+                        color: $primary-400;
+                    }
+                }
+            }
+        }
+        .gds-footer-legal-section{
+            p{
+                color: $grey-000;
+            }
+            .social_icons{
+                svg{
+                    path{
+                        fill:$secondary-000 ;
+                    }
+                }
+            }
+        }
+    }
+} 
+// footer alinements
+.gds-footer{
+    &.text-start{
+        .gds-footer-inner {
+            .gds-footer-sitemap{
+                justify-content: flex-start;
+            }
+            .gds-footer-legal-section{
+                .social_icons{
+                    margin: 24px 0;
+                    @include mobile-landscape{
+                        margin: 0 auto 16px;
+                      }
+                }
+            }
+        }
+    } 
+    &.text-center{
+        .gds-footer-inner {
+            .gds-footer-sitemap{
+                justify-content: space-around;
+            }
+            .gds-footer-legal-section{
+                .social_icons{
+                    margin: 24px auto;
+                    @include mobile-landscape{
+                        margin: 0 auto 16px;
+                      }
+                }
+            }
+        }
+    }
+}

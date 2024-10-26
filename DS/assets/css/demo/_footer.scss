@@ -1,0 +1,110 @@
+.gds-footer .gds-footer-inner {
+  padding: var(--spacer-l) 0;
+  display: inline-block;
+  width: 100%;
+  @include mobile-landscape{
+    padding: var(--spacer-m) 0 var(--spacer-base) 0;
+  }
+  @include mobile{
+    .gds-footer-logo{
+       img{
+        max-width: 140px;
+       }
+    }
+  }
+  .gds-footer-sitemap {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    position: relative;
+    li {
+      a.gds-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $white-000;
+        padding: 0 24px 0 0;
+        @include mobile-landscape {
+          padding-bottom: 16px;
+          line-height: 32px;
+        }
+        &:hover {
+          color: $secondary-200;
+        }
+      }
+      span.gds-link {
+        font-weight: 400;
+        font-size: 16px;
+        color: $white-000;
+        text-decoration: underline;
+        padding: 0;
+        margin-top: 8px;
+        display: block;
+        cursor: pointer;
+
+        &:hover {
+          color: $white-000;
+        }
+        &:focus-visible {
+          outline: 1px dashed #4c4c4c;
+        }
+        a {
+          color: $white-000;
+
+          &:hover {
+            color: $white-000;
+          }
+        }
+      }
+    }
+    ul.nav{
+      @include mobile-landscape {
+        display: flex;
+        flex-direction: column;
+        padding-top: 24px;
+      }
+    }
+  }
+  .gds-image a {
+    &:focus-visible {
+      outline: 1px dashed $white-000;
+      display: block;
+    }
+  }
+  .gds-footer-legal-section {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: $white-000;
+      margin: 0;
+
+      &.gds-paragraph {
+        padding: 24px 0;
+        @include mobile{
+          padding: 24px 0 16px;
+        }
+      }
+    }
+    .social_icons {
+      border-radius: 4px;
+      border: 1px solid $secondary-200;
+      max-width: 223px;
+      margin: auto;
+      margin-bottom: 24px;
+      padding: 8px 16px;
+      p {
+        margin-right: 16px;
+      }
+    }
+    .gds-copy_right {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}
+
+
+

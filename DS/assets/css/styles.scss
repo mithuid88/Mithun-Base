@@ -1,0 +1,44 @@
+//Base
+@import "base/variables";
+@import "base/body";
+@import "base/heading";
+@import 'fonts/fonts';
+@import "base/spacing";
+@import "base/template";
+@import "base/gloable-bg";
+@import "base/text-and-bg-colors";
+@import "base/buttons";
+
+//Atoms
+
+// Components
+@import "components/matanav";
+@import "components/header";
+@import "components/footer";
+@import "components/isi";
+// @import "components/oldisi";
+@import "components/gradient-banner";
+@import "components/media-banner";
+@import "components/secondary-nav";
+@import "components/tables";
+@import "components/img-placeholder";
+@import "components/rich-text-content";
+@import "components/img-zoom";
+@import "components/lists";
+// @import "components/form";
+@import "components/tags";
+@import "components/breadcrumb";
+@import "components/quotes";
+@import "components/testimonial";
+@import "components/tabs";
+@import "components/web-form";
+@import "components/media";
+@import "components/carousel";
+// @import "components/test-styles";
+@import "components/img-slider";
+// @import "components/search-bar";
+@import "components/range-slider";
+@import "components/sticky-sidenav";
+@import "components/jump-link";
+@import "components/custom-table";
+@import "components/tabbedisi";

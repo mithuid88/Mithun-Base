@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+// Color codes
+//Primary
+$primary-000: #3768FF;
+$primary-100: #2E53C5;
+$primary-200: #AFC3FF;
+$primary-300: #D7E1FF;
+//Secondary
+$secondary-000: #2B308B;
+$secondary-100: #2A30B4;
+$secondary-200: #6B6EAE;
+$secondary-300: #BFC1DC;
+//Action
+$action-000: #3768FF;
+$action-100: #3957B3;
+$action-lite-000: #2B308B;
+$action-lite-100: #2A30B4;
+//Monotones 
+$grey-000: #383838;
+$grey-100: #1E1E1E;
+$grey-090: #3B3B3B;
+$grey-080: #4D4D4D;
+$grey-070: #686868;
+$grey-060: #888888;
+$grey-050: #A9A9A9;
+$grey-040: #C8C8C8;
+$grey-030: #E5E5E5;
+$grey-020: #F0F0F0;
+$white-000: $white-000;
+//States
+//Success
+$success-000: #56AF02;
+$success-100: #EFFFDF;
+//Info
+$info-000: #009CD7;
+$info-100: #EDFBFF;
+//Warning
+$warning-000: #FFC11F;
+$warning-100: #FFF7E4;
+//Error
+$error-000: #CB3535;
+$error-100: #FFEFEF;
+//Accent
+$accent-000: #E0EAFF;
+$accent-100: #E0E3F0;
+$accent-200: #F5F2FF;
+$accent-300: #F6FBFF;
+//Background
+$blur-000: #F1F1F180;
+$blur-100: #000000;
+$blur-200: $white-000;
+//Button - Interaction States
+$disable: #B6B7B8;
+//page level colors
+$primary-400: #005CAB;
+$primary-600: #00ADEF;
+$grey-009: #888;
+$orange: #f15d5e;
+
+//Gradients
+@mixin gradient-1 {
+  background: linear-gradient(270deg, $primary-000 0.07%, $secondary-300 99.93%);
+}
+
+@mixin gradient-2 {
+  background: linear-gradient(90deg, $secondary-000 0.05%, #010ABB 99.93%);
+}
+
+@mixin gradient-White {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0.05%, rgba(255, 255, 255, 0.00) 75.96%);
+}
+
+@mixin gradient-Black-1 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.96) 27.51%, rgba(0, 0, 0, 0.00) 87.48%);
+}
+
+@mixin gradient-Black-2 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.96) 31.37%, rgba(0, 0, 0, 0.00) 92.91%)
+}
+
+// heading alinement
+$text-align-center: center;
+$text-align-right: right;
+$text-align-left: left;
+$bg-transparent: transparent;
+
+/* Media Queries */
+$mobile: 576px;
+$mobile-landscape: 767px;
+$ipad-potrait: 1024px;
+$ipad-landscape: 1366px;
+$desktop: 1200px;
+$desktop-small: 992px;
+$desktop-large: 1440px;
+
+@mixin desktop-large {
+  @media (min-width: $desktop-large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (max-width: $desktop-small) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape {
+  @media (max-width: $ipad-landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-potrait {
+  @media (min-width: $ipad-potrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (max-width: $mobile-landscape) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin text-bg-color {
+  background: linear-gradient(90deg, #622567 0%, rgba(98, 37, 103, 0.78) 79.17%);
+}
+
+@mixin text-bg {
+  box-shadow: 0 3px 10px 0 #b1a8a8;
+}

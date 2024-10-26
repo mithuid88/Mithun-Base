@@ -1,0 +1,157 @@
+.gds-testimonial {
+    .gds-testimonial-wrapper {
+        display: flex;
+
+
+        @media (max-width:767px) {
+            display: block;
+
+        }
+
+
+        .left-img {
+            flex-basis: 20%;
+
+            @media (max-width:767px) {
+                flex-basis: 50%;
+            }
+
+            .testimonial-desktop-img {
+                display: block;
+
+                @media (max-width:767px) {
+                    display: none;
+                }
+            }
+
+            .testimonial-mobile-img {
+                display: none;
+
+                @media (max-width:767px) {
+                    display: block;
+                }
+            }
+
+            .paragraph {
+                @media (min-width:768px) and (max-width:1024px) {
+                    height: 100%;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+
+
+
+                @media (max-width:767px) {
+                    max-width: 100%;
+                    // margin-bottom: 10px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+
+                }
+
+            }
+
+
+        }
+
+        .right-txt {
+            flex-basis: 80%;
+            padding-left: 24px;
+
+            @media (min-width:768px) and (max-width:992px) {
+                padding-left: 16px;
+            }
+
+            @media (max-width:767px) {
+                padding-left: 0;
+                padding-top: 16px;
+            }
+
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 32px;
+
+            @media (max-width:767px) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            &.person-name {
+                font-size: 28px;
+                line-height: 32px;
+                margin: 24px 0;
+                font-weight: 700;
+
+                @media (max-width:767px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 16px 0;
+
+                }
+            }
+        }
+
+    }
+
+    &.small-size {
+        max-width: 384px;
+
+
+        .left-img {
+            flex-basis: 151px;
+
+
+            img {
+                max-width: 100%;
+                height: auto;
+
+            }
+        }
+
+        .right-txt {
+            flex-basis: 203px;
+            display: flex;
+            align-items: center;
+            padding-left: var(--spacer-base);
+
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+
+            @media (max-width:767px) {
+                font-size: 14px;
+
+            }
+
+            &.person-name {
+                font-size: 16px;
+                line-height: 20px;
+
+                font-weight: 700;
+                color: $primary-000;
+                margin: 0;
+
+
+            }
+        }
+
+        .btn {
+            text-decoration: underline;
+
+            span {
+                padding-left: 15px;
+            }
+        }
+    }
+}

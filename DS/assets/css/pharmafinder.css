@@ -1,0 +1,8 @@
+#find-pharmacy-block .item-list ul {
+    list-style: none;
+}
+
+#find-pharmacy-block .views-label-field-ships-to {
+    display: none;
+
+}
