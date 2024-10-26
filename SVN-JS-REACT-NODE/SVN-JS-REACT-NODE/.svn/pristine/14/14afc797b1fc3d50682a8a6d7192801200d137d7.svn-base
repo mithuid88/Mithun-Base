@@ -1,0 +1,65 @@
+{
+  "name": "react-grapesjs",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.1",
+    "chart.js": "^3.8.2",
+    "ckeditor": "^4.12.1",
+    "downloadjs": "^1.4.7",
+    "font-awesome": "^4.7.0",
+    "grapesjs": "^0.20.3",
+    "grapesjs-blocks-basic": "^1.0.1",
+    "grapesjs-blocks-table": "^0.0.118",
+    "grapesjs-parser-postcss": "^1.0.1",
+    "grapesjs-plugin-ckeditor": "^0.0.10",
+    "grapesjs-plugin-forms": "^2.0.5",
+    "grapesjs-style-bg": "^2.0.1",
+    "grapesjs-tabs": "^1.0.6",
+    "grapesjs-tui-image-editor": "^1.0.1",
+    "jquery": "^3.6.0",
+    "monaco-editor": "^0.34.1",
+    "monaco-editor-webpack-plugin": "^7.0.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.0.0-rc.1",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
+    "sass": "^1.49.7",
+    "underscore.string": "^3.3.6",
+    "web-vitals": "^3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.2"
+  }
+}

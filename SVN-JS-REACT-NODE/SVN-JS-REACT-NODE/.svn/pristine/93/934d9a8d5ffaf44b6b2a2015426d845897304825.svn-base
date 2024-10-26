@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="text/javascript" src="./plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./plugins/bootstrap/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="i74w" class="gjs-row"><div id="iqop" class="gjs-cell"><div id="ikll">This is sample header</div></div></div><div id="ij2r" class="gjs-row"><div class="gjs-cell"></div></div>
+</body>
+
+</html>
