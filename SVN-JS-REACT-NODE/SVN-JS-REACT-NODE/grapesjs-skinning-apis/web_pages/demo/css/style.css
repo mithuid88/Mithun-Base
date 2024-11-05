@@ -1,1 +1,0 @@
-* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin:0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}#iray{padding:10px;}#imyj{padding:10px;}#iv94{padding:10px;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}
